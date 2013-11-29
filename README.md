@@ -2,7 +2,9 @@ IS3 Project
 ===========
 
 
-You need to use eclipse for this project unfortunately:
+You need to use eclipse for this project unfortunately. It's a requirement from the specification.
+
+Here are the steps:
 
 
 * Clone the repository
