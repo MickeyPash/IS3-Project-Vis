@@ -1,5 +1,7 @@
 package is3;
 
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -13,6 +15,7 @@ import prefuse.Constants;
 import prefuse.Display;
 import prefuse.Visualization;
 import prefuse.action.ActionList;
+import prefuse.action.RepaintAction;
 import prefuse.action.assignment.ColorAction;
 import prefuse.action.layout.AxisLabelLayout;
 import prefuse.action.layout.AxisLayout;
@@ -145,8 +148,8 @@ public class Olympics {
     	}
     	
     	
-    	Visualization vis = new Visualization();
-		Display display = new Display(vis);
+    	final Visualization vis = new Visualization();
+		final Display display = new Display(vis);
         
 		// ------------------------------------------------------------------
 		// Step 1: setup the visualised data
@@ -181,7 +184,17 @@ public class Olympics {
 		draw.add(x_labels);
 		draw.add(y_labels);
 		draw.add(color);
+		// draw.add(new RepaintAction());
 		vis.putAction("draw", draw);
+		
+		ActionList update = new ActionList();
+		update.add(x_axis);
+		update.add(y_axis);
+		update.add(x_labels);
+		update.add(y_labels);
+		update.add(color);
+		// draw.add(new RepaintAction());
+		vis.putAction("update", update);
 
 		// ------------------------------------------------------------------
 		// Step 4: Setup a display and controls
@@ -192,6 +205,13 @@ public class Olympics {
         display.addControlListener(new PanControl()); 
         // zoom with right-click drag
         display.addControlListener(new ZoomControl());
+        
+        // Update visuals when user resizes display
+        display.addComponentListener(new ComponentAdapter() {
+			public void componentResized(ComponentEvent e) {
+				vis.run("update");
+			}
+		});
 		
 		// Make graph fit in window
 		display.setBorder(BorderFactory.createEmptyBorder(15, 30, 15, 30));
