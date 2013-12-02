@@ -28,7 +28,7 @@ public class OlympicDataVisualiserFrame extends JFrame {
 	private String data = "/WrangledData.csv";
 	// This is a String array of the names of visualisations. These names must
 	// match the name of the visualisation class (whitespace is allowed)
-	private String[] visualisationOptions = { "Olympics" };
+	private String[] visualisationOptions = { "Olympic Scatterplot" };
 	// This is the array the visualisations will be added to when the program
 	// runs. Each visualisation will then be hidden/shown
 	private ArrayList<Display> visualisations = new ArrayList<Display>();
@@ -74,7 +74,7 @@ public class OlympicDataVisualiserFrame extends JFrame {
 //		getContentPane().add(
 //				ScatterPlot.demo("/fisher.iris.txt", "SepalLength",
 //						"PetalLength"), BorderLayout.CENTER);
-
+		getContentPane().add(visualisations.get(0));
 		pack();
 		setVisible(true);
 	}
