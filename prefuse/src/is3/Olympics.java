@@ -1,5 +1,11 @@
 package is3;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 
@@ -44,7 +50,7 @@ public class Olympics {
     	schema.addColumn("Country", String.class);
     	schema.addColumn("Continent", int.class);
     	schema.addColumn("Adult literacy rate (%)", Double.class);
-    	schema.addColumn("Population (in thousands) total", Double.class);
+    	schema.addColumn("Population (in thousands) total", int.class);
     	schema.addColumn("Population median age (years)", int.class);
     	schema.addColumn("Community and traditional health workers density (per 10 000 population)", Double.class);
     	schema.addColumn("General government expenditure on health as percentage of total expenditure on health", int.class);
@@ -60,53 +66,84 @@ public class Olympics {
     	
     	////// Test data //////
     	
-    	table.addRows(2);
+    	table.addRows(200); /* this is me just randomly putting 200 ssince I know there isnt more than 200 countries, need to change this */
     	
-		table.set(0, 0, "United States");
-		table.set(0, 1, 1);
-		table.set(0, 2, 80.0);
-		table.set(0, 3, 12000.0);
-		table.set(0, 4, 50);
-		table.set(0, 5, 10.0);
-		table.set(0, 6, 10);
-		table.set(0, 7, 10);
-		table.set(0, 8, 200);
-		table.set(0, 9, 300);
-		table.set(0, 10, 500);
-		table.set(0, 11, 20);
-		table.set(0, 12, 30);
-		table.set(0, 13, 45);
-
- 
-		table.set(1, 0, "New Zealand");
-		table.set(1, 1, 4);
-		table.set(1, 2, 85.0);
-		table.set(1, 3, 1000.0);
-		table.set(1, 4, 52);
-		table.set(1, 5, 15.0);
-		table.set(1, 6, 15);
-		table.set(1, 7, 15);
-		table.set(1, 8, 100);
-		table.set(1, 9, 150);
-		table.set(1, 10, 250);
-		table.set(1, 11, 5);
-		table.set(1, 12, 4);
-		table.set(1, 13, 11);
+//		table.set(0, 0, "United States");
+//		table.set(0, 1, 1);
+//		table.set(0, 2, 80.0);
+//		table.set(0, 3, 12000.0);
+//		table.set(0, 4, 50);
+//		table.set(0, 5, 10.0);
+//		table.set(0, 6, 10);
+//		table.set(0, 7, 10);
+//		table.set(0, 8, 200);
+//		table.set(0, 9, 300);
+//		table.set(0, 10, 500);
+//		table.set(0, 11, 20);
+//		table.set(0, 12, 30);
+//		table.set(0, 13, 45);
+//
+// 
+//		table.set(1, 0, "New Zealand");
+//		table.set(1, 1, 4);
+//		table.set(1, 2, 85.0);
+//		table.set(1, 3, 1000.0);
+//		table.set(1, 4, 52);
+//		table.set(1, 5, 15.0);
+//		table.set(1, 6, 15);
+//		table.set(1, 7, 15);
+//		table.set(1, 8, 100);
+//		table.set(1, 9, 150);
+//		table.set(1, 10, 250);
+//		table.set(1, 11, 5);
+//		table.set(1, 12, 4);
+//		table.set(1, 13, 11);
 		
+		
+    /* PLEASE IGNORE FOLLOWING CODE */
+    	
+//		BufferedReader br = null;
+//    	File file = null;
+//    	Scanner newS = null;
+//    	int row = 1;
+//    	int collumn = 0;
+//    	try{
+//
+//    	   // br = new BufferedReader(new FileReader("/prefuse/data/WrangledData.csv"));
+//    	   // file = new File("amazon.txt");
+//    	    file = new File(System.getProperty("user.dir") + "/data/WrangledData2.csv");
+//    	    String test = file.getAbsolutePath();
+//    	    System.out.println(test);
+//    	    newS = new Scanner(file);
+//    	    String strLine;
+//    	    strLine = newS.nextLine();
+//    	    //Read File Line By Line
+//    	    while ((strLine = newS.nextLine()) != null)   {
+//    	      // Print the content on the console
+//    	      Scanner lineScanner = new Scanner(strLine);
+//    	      System.out.println(strLine);
+//    	      Object[] g = strLine.split(",");
+//    	      collumn = 0;
+//    	      for (Object s: g){
+//    	    	System.out.println(s);
+//      	    	table.set(row, collumn, s);
+//      	    	collumn++;
+//    	      }
+
 		////// Test data //////
     	
-    	/*
-    	 * Not used yet, need to look into how to store appropriate types
-    	 * 
+    	
+    	// Not used yet, need to look into how to store appropriate types
+    	 
     	try {
-    		table = new CSVTableReader().readTable("/WrangledData.csv");
+    		table = new CSVTableReader().readTable("/WrangledData2.csv");
     	}
     	catch (DataIOException e) {
     		e.printStackTrace();
             System.err.println("Error loading table. Exiting...");
             System.exit(1);
     	}
-    	*/
+    	
     	
     	Visualization vis = new Visualization();
 		Display display = new Display(vis);
