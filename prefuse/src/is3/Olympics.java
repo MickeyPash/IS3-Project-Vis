@@ -17,9 +17,9 @@ import prefuse.Visualization;
 import prefuse.action.ActionList;
 import prefuse.action.RepaintAction;
 import prefuse.action.assignment.ColorAction;
+import prefuse.action.assignment.DataColorAction;
 import prefuse.action.layout.AxisLabelLayout;
 import prefuse.action.layout.AxisLayout;
-import prefuse.controls.DragControl;
 import prefuse.controls.PanControl;
 import prefuse.controls.ToolTipControl;
 import prefuse.controls.ZoomControl;
@@ -29,8 +29,6 @@ import prefuse.data.io.CSVTableReader;
 import prefuse.data.io.DataIOException;
 import prefuse.render.AxisRenderer;
 import prefuse.render.DefaultRendererFactory;
-import prefuse.render.Renderer;
-import prefuse.render.RendererFactory;
 import prefuse.util.ColorLib;
 import prefuse.visual.VisualItem;
 import prefuse.visual.expression.InGroupPredicate;
@@ -176,14 +174,32 @@ public class Olympics {
 		AxisLabelLayout x_labels = new AxisLabelLayout("xlab", x_axis);
 		AxisLabelLayout y_labels = new AxisLabelLayout("ylab", y_axis);
 		
-		ColorAction color = new ColorAction("data", VisualItem.STROKECOLOR, ColorLib.rgb(100, 100, 255));
+		// Colour palette for continents
+		int[] palette = new int[] {
+				// Middle East
+	            ColorLib.rgb(20,120,100),
+	            // Europe
+	            ColorLib.rgb(105,245,40),
+	            // Africa
+	            ColorLib.rgb(200,200,135),
+	            // North America
+	            ColorLib.rgb(35,50,225),
+	            // South America
+	            ColorLib.rgb(190,115,20),
+	            // Oceania
+	            ColorLib.rgb(95,175,210),
+	            // Asia
+	            ColorLib.rgb(220,15,40)
+	        };
+		
+		DataColorAction fill = new DataColorAction("data", "Continent", Constants.NOMINAL, VisualItem.FILLCOLOR, palette);
     	
 		ActionList draw = new ActionList();
 		draw.add(x_axis);
 		draw.add(y_axis);
 		draw.add(x_labels);
 		draw.add(y_labels);
-		draw.add(color);
+		draw.add(fill);
 		// draw.add(new RepaintAction());
 		vis.putAction("draw", draw);
 		
@@ -192,7 +208,7 @@ public class Olympics {
 		update.add(y_axis);
 		update.add(x_labels);
 		update.add(y_labels);
-		update.add(color);
+		draw.add(fill);
 		// draw.add(new RepaintAction());
 		vis.putAction("update", update);
 
