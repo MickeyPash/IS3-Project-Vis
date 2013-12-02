@@ -136,7 +136,7 @@ public class Olympics {
     	// Not used yet, need to look into how to store appropriate types
     	 
     	try {
-    		table = new CSVTableReader().readTable("/WrangledData2.csv");
+    		table = new CSVTableReader().readTable("/WrangledData.csv");
     	}
     	catch (DataIOException e) {
     		e.printStackTrace();
