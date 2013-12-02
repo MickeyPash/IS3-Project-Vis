@@ -30,20 +30,19 @@ import prefuse.visual.sort.ItemSorter;
 
 public class OlympicScatterplot extends Display {
 	
+	private Table table;
+	
 	public OlympicScatterplot(String csvfile) {
 		
 		super(new Visualization());
 		
+		// Make visualisation easily accessible
 		final Visualization vis = this.m_vis;
-		
-		// Help mainly found at:
-		// http://www.ifs.tuwien.ac.at/~rind/w/doku.php/java/prefuse-scatterplot
 	    
-		Table table = new Table();
+		table = new Table();
 		Schema schema = new Schema();
 		
 		// Schema allows specifying type of data being stored
-		// Need to look into how to store appropriate types when reading from CSV
 		
 		schema.addColumn("Country", String.class);
 		schema.addColumn("Continent", int.class);
@@ -65,6 +64,7 @@ public class OlympicScatterplot extends Display {
 		/* this is me just randomly putting 200 ssince I know there isnt more than 200 countries, need to change this */
 		table.addRows(200);
 		
+		// Read table from csv file
 		try {
 			table = new CSVTableReader().readTable(csvfile);
 		}
@@ -73,9 +73,6 @@ public class OlympicScatterplot extends Display {
 	        System.err.println("Error loading table. Exiting...");
 	        System.exit(1);
 		}
-		
-		
-		
 	    
 		// ------------------------------------------------------------------
 		// Step 1: setup the visualised data
@@ -89,6 +86,7 @@ public class OlympicScatterplot extends Display {
 		
 		DefaultRendererFactory rf = new DefaultRendererFactory(); 
 		
+		// Render labels on x & y axis
 		rf.add(new InGroupPredicate("ylab"), 
 				new AxisRenderer(Constants.FAR_LEFT, Constants.CENTER));
 		rf.add(new InGroupPredicate("xlab"), 
