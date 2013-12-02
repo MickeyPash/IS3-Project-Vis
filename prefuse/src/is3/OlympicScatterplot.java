@@ -1,7 +1,9 @@
 package is3;
 
+import java.awt.Insets;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
+import java.awt.geom.Rectangle2D;
 
 import javax.swing.BorderFactory;
 
@@ -33,6 +35,9 @@ public class OlympicScatterplot extends Display {
 	private Table table;
 	
 	public OlympicScatterplot(String csvfile) {
+		
+		// Help mainly found at:
+		// http://www.ifs.tuwien.ac.at/~rind/w/doku.php/java/prefuse-scatterplot
 		
 		super(new Visualization());
 		
@@ -73,6 +78,10 @@ public class OlympicScatterplot extends Display {
 	        System.err.println("Error loading table. Exiting...");
 	        System.exit(1);
 		}
+		
+		final Rectangle2D boundsData = new Rectangle2D.Double();
+		final Rectangle2D boundsLabelsX = new Rectangle2D.Double();
+		final Rectangle2D boundsLabelsY = new Rectangle2D.Double();
 	    
 		// ------------------------------------------------------------------
 		// Step 1: setup the visualised data
@@ -99,8 +108,11 @@ public class OlympicScatterplot extends Display {
 		AxisLayout x_axis = new AxisLayout("data", "TeamSize", Constants.X_AXIS, VisiblePredicate.TRUE);
 		AxisLayout y_axis = new AxisLayout("data", "Gold", Constants.Y_AXIS, VisiblePredicate.TRUE);
 		
-		AxisLabelLayout x_labels = new AxisLabelLayout("xlab", x_axis);
-		AxisLabelLayout y_labels = new AxisLabelLayout("ylab", y_axis);
+		x_axis.setLayoutBounds(boundsData);
+		y_axis.setLayoutBounds(boundsData);
+		
+		AxisLabelLayout x_labels = new AxisLabelLayout("xlab", x_axis, boundsLabelsX);
+		AxisLabelLayout y_labels = new AxisLabelLayout("ylab", y_axis, boundsLabelsY);
 		
 		// Colour palette for continents
 		int[] palette = new int[] {
@@ -153,12 +165,10 @@ public class OlympicScatterplot extends Display {
 	    // Update visuals when user resizes display
 	    addComponentListener(new ComponentAdapter() {
 			public void componentResized(ComponentEvent e) {
+				updateBounds(boundsData, boundsLabelsX, boundsLabelsY);
 				vis.run("update");
 			}
 		});
-		
-		// Make graph fit in window
-		setBorder(BorderFactory.createEmptyBorder(15, 30, 15, 30));
 		
 		setItemSorter(new ItemSorter() {
 			public int score(VisualItem item) {
@@ -175,8 +185,41 @@ public class OlympicScatterplot extends Display {
 		
 		// ------------------------------------------------------------------
 		// Step 5: Launching the visualisation
-		
+
+		updateBounds(boundsData, boundsLabelsX, boundsLabelsY);
 		vis.run("draw");
+	}
+	
+	/**
+	 * Taken from http://www.ifs.tuwien.ac.at/~rind/w/doku.php/java/prefuse-scatterplot
+	 * 
+	 * @param boundsData
+	 * @param boundsLabelsX
+	 * @param boundsLabelsY
+	 */
+	private void updateBounds(Rectangle2D boundsData, Rectangle2D boundsLabelsX, Rectangle2D boundsLabelsY) {
+
+		int paddingLeft = 30;
+		int paddingTop = 15;
+		int paddingRight = 30;
+		int paddingBottom = 15;
+
+		int axisWidth = 20;
+		int axisHeight = 10;
+
+		Insets i = getInsets();
+
+		int left = i.left + paddingLeft;
+		int top = i.top + paddingTop;
+		int innerWidth = getWidth() - i.left - i.right - paddingLeft - paddingRight;
+		int innerHeight = getHeight() - i.top - i.bottom - paddingTop - paddingBottom;
+
+		boundsData.setRect(left + axisWidth, top, innerWidth - axisWidth,
+				innerHeight - axisHeight);
+		boundsLabelsX.setRect(left + axisWidth, top + innerHeight - axisHeight,
+				innerWidth - axisWidth, axisHeight);
+		boundsLabelsY.setRect(left, top, innerWidth + paddingRight, innerHeight
+				- axisHeight);
 	}
 	
 }
