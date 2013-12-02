@@ -16,7 +16,6 @@ import prefuse.Display;
 import prefuse.Visualization;
 import prefuse.action.ActionList;
 import prefuse.action.RepaintAction;
-import prefuse.action.assignment.ColorAction;
 import prefuse.action.assignment.DataColorAction;
 import prefuse.action.layout.AxisLabelLayout;
 import prefuse.action.layout.AxisLayout;
@@ -177,19 +176,19 @@ public class Olympics {
 		// Colour palette for continents
 		int[] palette = new int[] {
 				// Middle East
-	            ColorLib.rgb(20,120,100),
+	            ColorLib.rgba(20,120,100,125),
 	            // Europe
-	            ColorLib.rgb(105,245,40),
+	            ColorLib.rgba(105,245,40,125),
 	            // Africa
-	            ColorLib.rgb(200,200,135),
+	            ColorLib.rgba(200,200,135,125),
 	            // North America
-	            ColorLib.rgb(35,50,225),
+	            ColorLib.rgba(35,50,225,125),
 	            // South America
-	            ColorLib.rgb(190,115,20),
+	            ColorLib.rgba(190,115,20,125),
 	            // Oceania
-	            ColorLib.rgb(95,175,210),
+	            ColorLib.rgba(95,175,210,125),
 	            // Asia
-	            ColorLib.rgb(220,15,40)
+	            ColorLib.rgba(220,15,40,125)
 	        };
 		
 		DataColorAction fill = new DataColorAction("data", "Continent", Constants.NOMINAL, VisualItem.FILLCOLOR, palette);
