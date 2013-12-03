@@ -74,7 +74,43 @@ public class OlympicTreeView extends Display {
     private static final String treeNodes = "tree.nodes";
     private static final String treeEdges = "tree.edges";
     
-    private LabelRenderer m_nodeRenderer;
+    public static String getTreeChi() {
+		return TREE_CHI;
+	}
+
+	public static String getTree() {
+		return tree;
+	}
+
+	public static String getTreenodes() {
+		return treeNodes;
+	}
+
+	public static String getTreeedges() {
+		return treeEdges;
+	}
+
+	public LabelRenderer getM_nodeRenderer() {
+		return m_nodeRenderer;
+	}
+
+	public EdgeRenderer getM_edgeRenderer() {
+		return m_edgeRenderer;
+	}
+
+	public String getM_label() {
+		return m_label;
+	}
+
+	public int getM_orientation() {
+		return m_orientation;
+	}
+
+	public static Tree getT() {
+		return t;
+	}
+
+	private LabelRenderer m_nodeRenderer;
     private EdgeRenderer m_edgeRenderer;
     
     private String m_label = "label";
