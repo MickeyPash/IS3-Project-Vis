@@ -79,11 +79,26 @@ public class OlympicTreeView extends Display {
     
     private String m_label = "label";
     private int m_orientation = Constants.ORIENT_LEFT_RIGHT;
+    private static Tree t = null;
     
-    public OlympicTreeView(Tree t, String label) {
+    public OlympicTreeView(String args) {
         super(new Visualization());
+        String infile = TREE_CHI;
+        String label = "name";
         m_label = label;
 
+        Color BACKGROUND = Color.WHITE;
+        Color FOREGROUND = Color.BLACK;
+        
+        t = null;
+        
+        try {
+            t = (Tree)new TreeMLReader().readGraph(infile);
+        } catch ( Exception e ) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+        
         m_vis.add(tree, t);
         
         m_nodeRenderer = new LabelRenderer(m_label);
@@ -258,21 +273,21 @@ public class OlympicTreeView extends Display {
     
     // ------------------------------------------------------------------------
     
-    public static void main(String argv[]) {
-        String infile = TREE_CHI;
-        String label = "name";
-        if ( argv.length > 1 ) {
-            infile = argv[0];
-            label = argv[1];
-        }
-        JComponent treeview = demo(infile, label);
-        
-        JFrame frame = new JFrame("Olympic Tree View");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setContentPane(treeview);
-        frame.pack();
-        frame.setVisible(true);
-    }
+//    public static void main(String argv[]) {
+//        String infile = TREE_CHI;
+//        String label = "name";
+//        if ( argv.length > 1 ) {
+//            infile = argv[0];
+//            label = argv[1];
+//        }
+//        JComponent treeview = demo(infile, label);
+//        
+//        JFrame frame = new JFrame("Olympic Tree View");
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame.setContentPane(treeview);
+//        frame.pack();
+//        frame.setVisible(true);
+//    }
     
     public static JComponent demo() {
         return demo(TREE_CHI, "name");
@@ -282,7 +297,8 @@ public class OlympicTreeView extends Display {
         Color BACKGROUND = Color.WHITE;
         Color FOREGROUND = Color.BLACK;
         
-        Tree t = null;
+        t = null;
+        
         try {
             t = (Tree)new TreeMLReader().readGraph(datafile);
         } catch ( Exception e ) {
@@ -291,7 +307,7 @@ public class OlympicTreeView extends Display {
         }
         
         // create a new treemap
-        final OlympicTreeView tview = new OlympicTreeView(t, label);
+        final OlympicTreeView tview = new OlympicTreeView(label);
         tview.setBackground(BACKGROUND);
         tview.setForeground(FOREGROUND);
         

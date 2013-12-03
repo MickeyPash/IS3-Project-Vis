@@ -28,7 +28,7 @@ public class OlympicDataVisualiserFrame extends JFrame {
 	private String data = "/WrangledData.csv";
 	// This is a String array of the names of visualisations. These names must
 	// match the name of the visualisation class (whitespace is allowed)
-	private String[] visualisationOptions = { "Olympic Scatterplot" };
+	private String[] visualisationOptions = { "Olympic Scatterplot", "Olympic Tree View" };
 	// This is the array the visualisations will be added to when the program
 	// runs. Each visualisation will then be hidden/shown
 	private ArrayList<Display> visualisations = new ArrayList<Display>();
