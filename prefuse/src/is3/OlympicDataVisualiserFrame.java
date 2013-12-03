@@ -26,12 +26,14 @@ public class OlympicDataVisualiserFrame extends JFrame {
 	// This is the location of the data, This is passed into the constructor of
 	// every visualisation
 	private String data = "/WrangledData.csv";
+	
 	// This is a String array of the names of visualisations. These names must
 	// match the name of the visualisation class (whitespace is allowed)
 	private String[] visualisationOptions = { "Olympic Scatterplot", "Olympic Tree View" };
+	
 	// This is the array the visualisations will be added to when the program
 	// runs. Each visualisation will then be hidden/shown
-	private ArrayList<Display> visualisations = new ArrayList<Display>();
+	private ArrayList<JPanel> visualisations = new ArrayList<JPanel>();
 
 	/**
 	 * 
@@ -52,9 +54,9 @@ public class OlympicDataVisualiserFrame extends JFrame {
 			Constructor<?> constructor;
 			try {
 				clazz = Class.forName("is3."
-						+ visualisation.replaceAll("\\s+", ""));
+						+ visualisation.replaceAll("\\s+", "")+"Panel");
 				constructor = clazz.getConstructor(String.class);
-				visualisations.add((Display) constructor.newInstance(data));
+				visualisations.add((JPanel) constructor.newInstance(data));
 			} catch (ClassNotFoundException | NoSuchMethodException
 					| SecurityException | InstantiationException
 					| IllegalAccessException | IllegalArgumentException
@@ -73,14 +75,8 @@ public class OlympicDataVisualiserFrame extends JFrame {
 		visualisationSelector.addActionListener(new ComboBoxListener());
 
 		getContentPane().add(visualisationSelector, BorderLayout.PAGE_START);
-
-		// This was just to test that a display could be shown/hidden in the
-		// right spot
-//		getContentPane().add(
-//				ScatterPlot.demo("/fisher.iris.txt", "SepalLength",
-//						"PetalLength"), BorderLayout.CENTER);
 		getContentPane().add(visualisations.get(0));
-		getContentPane().add(new AxisPanel(visualisations.get(0)), BorderLayout.PAGE_END);
+
 		pack();
 		setVisible(true);
 	}
