@@ -11,11 +11,11 @@ public class Olympics {
     public static void main(String[] argv) {
     	
     	OlympicScatterplot scatterplot = new OlympicScatterplot("/WrangledData.csv");
-    	AxisPanel axisPanel = new AxisPanel(scatterplot);
+    	//AxisPanel axisPanel = new AxisPanel(scatterplot);
     	
     	JPanel contentPanel = new JPanel(new BorderLayout());
     	contentPanel.add(scatterplot, BorderLayout.PAGE_START);
-    	contentPanel.add(axisPanel, BorderLayout.PAGE_END);
+    //	contentPanel.add(axisPanel, BorderLayout.PAGE_END);
     	
 		// create a new window to hold the visualization
         JFrame frame = new JFrame("Olympics Graph");
