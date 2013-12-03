@@ -75,6 +75,7 @@ public class OlympicDataVisualiserFrame extends JFrame {
 //				ScatterPlot.demo("/fisher.iris.txt", "SepalLength",
 //						"PetalLength"), BorderLayout.CENTER);
 		getContentPane().add(visualisations.get(0));
+		getContentPane().add(new AxisPanel(visualisations.get(0)), BorderLayout.PAGE_END);
 		pack();
 		setVisible(true);
 	}

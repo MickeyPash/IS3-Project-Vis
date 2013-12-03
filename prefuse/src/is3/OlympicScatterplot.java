@@ -5,14 +5,14 @@ import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.geom.Rectangle2D;
 
-import javax.swing.BorderFactory;
-
 import prefuse.Constants;
 import prefuse.Display;
 import prefuse.Visualization;
 import prefuse.action.ActionList;
 import prefuse.action.RepaintAction;
 import prefuse.action.assignment.DataColorAction;
+import prefuse.action.assignment.DataShapeAction;
+import prefuse.action.assignment.DataSizeAction;
 import prefuse.action.layout.AxisLabelLayout;
 import prefuse.action.layout.AxisLayout;
 import prefuse.activity.Activity;
@@ -23,12 +23,14 @@ import prefuse.data.Schema;
 import prefuse.data.Table;
 import prefuse.data.io.CSVTableReader;
 import prefuse.data.io.DataIOException;
+import prefuse.render.AbstractShapeRenderer;
 import prefuse.render.AxisRenderer;
-import prefuse.render.DefaultRendererFactory;
+import prefuse.render.Renderer;
+import prefuse.render.RendererFactory;
+import prefuse.render.ShapeRenderer;
 import prefuse.util.ColorLib;
 import prefuse.visual.VisualItem;
 import prefuse.visual.VisualTable;
-import prefuse.visual.expression.InGroupPredicate;
 import prefuse.visual.expression.VisiblePredicate;
 import prefuse.visual.sort.ItemSorter;
 
@@ -96,14 +98,16 @@ public class OlympicScatterplot extends Display {
 		// ------------------------------------------------------------------
 		// Step 2: setup renderers for visualised data
 
-		DefaultRendererFactory rf = new DefaultRendererFactory();
+		m_vis.setRendererFactory(new RendererFactory() {
+			AbstractShapeRenderer sr = new ShapeRenderer(7);
+			Renderer arY = new AxisRenderer(Constants.FAR_LEFT, Constants.CENTER);
+			Renderer arX = new AxisRenderer(Constants.CENTER, Constants.FAR_BOTTOM);
 
-		// Render labels on x & y axis
-		rf.add(new InGroupPredicate("ylab"), new AxisRenderer(
-				Constants.FAR_LEFT, Constants.CENTER));
-		rf.add(new InGroupPredicate("xlab"), new AxisRenderer(Constants.CENTER,
-				Constants.FAR_BOTTOM));
-		m_vis.setRendererFactory(rf);
+			public Renderer getRenderer(VisualItem item) {
+				return item.isInGroup("ylab") ? arY
+						: item.isInGroup("xlab") ? arX : sr;
+			}
+		});
 
 		// ------------------------------------------------------------------
 		// Step 3: create actions to process the visual data
@@ -138,21 +142,31 @@ public class OlympicScatterplot extends Display {
 				// Asia
 				ColorLib.rgba(220, 15, 40, 125) };
 
-		DataColorAction fill = new DataColorAction("data", "Continent",
-				Constants.NOMINAL, VisualItem.FILLCOLOR, palette);
+		DataColorAction fill = new DataColorAction("data", "Continent", Constants.NOMINAL, VisualItem.FILLCOLOR, palette);
+		
+		// Make points hexagons
+		int[] shapes = new int[] { Constants.SHAPE_HEXAGON };
+		DataShapeAction shape = new DataShapeAction("data", "Country", shapes);
+		
+		// Size of points determined by Population
+		// Makes points HUGE
+        // DataSizeAction size = new DataSizeAction("data", "Population (in thousands) total");
 
 		ActionList draw = new ActionList(Activity.INFINITY);
 		draw.add(x_axis);
 		draw.add(y_axis);
 		draw.add(x_labels);
 		draw.add(y_labels);
+        // draw.add(size);
+		draw.add(shape);
 		draw.add(fill);
 		draw.add(new RepaintAction());
 		m_vis.putAction("draw", draw);
 
 		// ------------------------------------------------------------------
 		// Step 4: Setup a display and controls
-
+		
+		setHighQuality(true);
 		// set display size
 		setSize(720, 500);
 		// pan with left-click drag on background
@@ -232,6 +246,7 @@ public class OlympicScatterplot extends Display {
 	 */
 	public void setXField(String field) {
 		x_axis.setDataField(field);
+		y_axis.setDataField(y_axis.getDataField());
 	}
 
 	/**
@@ -241,6 +256,7 @@ public class OlympicScatterplot extends Display {
 	 */
 	public void setYField(String field) {
 		y_axis.setDataField(field);
+		x_axis.setDataField(x_axis.getDataField());
 	}
 
 }
