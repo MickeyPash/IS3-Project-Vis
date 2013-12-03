@@ -150,19 +150,6 @@ public class OlympicScatterplot extends Display {
 		draw.add(new RepaintAction());
 		m_vis.putAction("draw", draw);
 
-		// Dont think this is needed anymore. Now that the draw ActionList will
-		// run for an infinite amount of time(in the argument in the actionlist
-		// constructor) and the actionlist has the RepaintAction in it which
-		// tells it to call this actionlist any time the data is updated
-//		ActionList update = new ActionList();
-//		update.add(x_axis);
-//		update.add(y_axis);
-//		update.add(x_labels);
-//		update.add(y_labels);
-//		update.add(fill);
-//		update.add(new RepaintAction());
-//		m_vis.putAction("update", update);
-
 		// ------------------------------------------------------------------
 		// Step 4: Setup a display and controls
 
@@ -245,8 +232,6 @@ public class OlympicScatterplot extends Display {
 	 */
 	public void setXField(String field) {
 		x_axis.setDataField(field);
-		// This line doesn't do anything...
-		m_vis.run("update");
 	}
 
 	/**
@@ -256,8 +241,6 @@ public class OlympicScatterplot extends Display {
 	 */
 	public void setYField(String field) {
 		y_axis.setDataField(field);
-		// This line doesn't do anything...
-		m_vis.run("update");
 	}
 
 }
