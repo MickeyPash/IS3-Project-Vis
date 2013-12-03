@@ -156,7 +156,9 @@ public class OlympicScatterplot extends Display {
 		
 		// Size of points determined by Population
 		// Makes points HUGE
-        // DataSizeAction size = new DataSizeAction("data", "Population (in thousands) total");
+         DataSizeAction size = new DataSizeAction("data", "Population (in thousands) total", 500, Constants.LINEAR_SCALE);
+         size.setMaximumSize(25.0);
+         System.out.println();
 		
 		// TODO Background Image?
 
@@ -165,7 +167,7 @@ public class OlympicScatterplot extends Display {
 		draw.add(y_axis);
 		draw.add(x_labels);
 		draw.add(y_labels);
-        // draw.add(size);
+        draw.add(size);
 		draw.add(shape);
 		draw.add(fill);
 		draw.add(new RepaintAction());
