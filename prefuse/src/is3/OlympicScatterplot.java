@@ -33,6 +33,8 @@ import prefuse.visual.sort.ItemSorter;
 public class OlympicScatterplot extends Display {
 	
 	private Table table;
+	private AxisLayout x_axis;
+	private AxisLayout y_axis;
 	
 	public OlympicScatterplot(String csvfile) {
 		
@@ -40,9 +42,6 @@ public class OlympicScatterplot extends Display {
 		// http://www.ifs.tuwien.ac.at/~rind/w/doku.php/java/prefuse-scatterplot
 		
 		super(new Visualization());
-		
-		// Make visualisation easily accessible
-		final Visualization vis = this.m_vis;
 	    
 		table = new Table();
 		Schema schema = new Schema();
@@ -86,7 +85,7 @@ public class OlympicScatterplot extends Display {
 		// ------------------------------------------------------------------
 		// Step 1: setup the visualised data
 		
-		VisualTable vt = vis.addTable("data", table);
+		VisualTable vt = m_vis.addTable("data", table);
 		
 		vt.addColumn("label", "CONCAT([Country],': ', ' Gold: ', [Gold], ';  Silver: ', [Silver], ';  Bronze: ', [Bronze])");
 		
@@ -100,13 +99,13 @@ public class OlympicScatterplot extends Display {
 				new AxisRenderer(Constants.FAR_LEFT, Constants.CENTER));
 		rf.add(new InGroupPredicate("xlab"), 
 				new AxisRenderer(Constants.CENTER, Constants.FAR_BOTTOM));
-		vis.setRendererFactory(rf);
+		m_vis.setRendererFactory(rf);
 		
 		// ------------------------------------------------------------------
 		// Step 3: create actions to process the visual data
 		
-		AxisLayout x_axis = new AxisLayout("data", "TeamSize", Constants.X_AXIS, VisiblePredicate.TRUE);
-		AxisLayout y_axis = new AxisLayout("data", "Gold", Constants.Y_AXIS, VisiblePredicate.TRUE);
+		x_axis = new AxisLayout("data", "TeamSize", Constants.X_AXIS, VisiblePredicate.TRUE);
+		y_axis = new AxisLayout("data", "Gold", Constants.Y_AXIS, VisiblePredicate.TRUE);
 		
 		x_axis.setLayoutBounds(boundsData);
 		y_axis.setLayoutBounds(boundsData);
@@ -141,7 +140,7 @@ public class OlympicScatterplot extends Display {
 		draw.add(y_labels);
 		draw.add(fill);
 		// draw.add(new RepaintAction());
-		vis.putAction("draw", draw);
+		m_vis.putAction("draw", draw);
 		
 		ActionList update = new ActionList();
 		update.add(x_axis);
@@ -150,7 +149,7 @@ public class OlympicScatterplot extends Display {
 		update.add(y_labels);
 		update.add(fill);
 		// draw.add(new RepaintAction());
-		vis.putAction("update", update);
+		m_vis.putAction("update", update);
 
 		// ------------------------------------------------------------------
 		// Step 4: Setup a display and controls
@@ -166,7 +165,7 @@ public class OlympicScatterplot extends Display {
 	    addComponentListener(new ComponentAdapter() {
 			public void componentResized(ComponentEvent e) {
 				updateBounds(boundsData, boundsLabelsX, boundsLabelsY);
-				vis.run("update");
+				m_vis.run("update");
 			}
 		});
 		
@@ -187,7 +186,8 @@ public class OlympicScatterplot extends Display {
 		// Step 5: Launching the visualisation
 
 		updateBounds(boundsData, boundsLabelsX, boundsLabelsY);
-		vis.run("draw");
+		m_vis.run("draw");
+		
 	}
 	
 	/**
@@ -220,6 +220,26 @@ public class OlympicScatterplot extends Display {
 				innerWidth - axisWidth, axisHeight);
 		boundsLabelsY.setRect(left, top, innerWidth + paddingRight, innerHeight
 				- axisHeight);
+	}
+	
+	/**
+	 * Change what x_axis tracks
+	 * @param field
+	 */
+	public void setXField(String field) {
+		x_axis.setDataField(field);
+		// This line doesn't do anything...
+		m_vis.run("update");
+	}
+	
+	/**
+	 * Change what y_axis tracks
+	 * @param field
+	 */
+	public void setYField(String field) {
+		y_axis.setDataField(field);
+		// This line doesn't do anything...
+		m_vis.run("update");
 	}
 	
 }
