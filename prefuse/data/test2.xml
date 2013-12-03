@@ -1,0 +1,623 @@
+<tree>
+ <declarations>
+   <attributeDecl name="name" type="String"/>
+ </declarations>
+ <branch>
+  <attribute name="name" value="Continents"/>
+  <branch>
+   <attribute name="name" value="Europe"/>
+   <branch>
+    <attribute name="name" value="Albania"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Andorra"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Armenia"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Austria"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Azerbaijan"/>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="6"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Belarus"/>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="5"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="5"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Belgium"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Bosnia and Herzegovina"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Bulgaria"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Croatia"/>
+    <leaf>
+     <attribute name="name" value="3"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Cyprus"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Czech Republic"/>
+    <leaf>
+     <attribute name="name" value="4"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="3"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="3"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Denmark"/>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="4"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="3"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Estonia"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Finland"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="France"/>
+    <leaf>
+     <attribute name="name" value="11"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="11"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="12"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Georgia"/>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="3"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="3"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Germany"/>
+    <leaf>
+     <attribute name="name" value="11"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="19"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="14"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Greece"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Hungary"/>
+    <leaf>
+     <attribute name="name" value="8"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="4"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="5"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Iceland"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Ireland"/>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="3"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Italy"/>
+    <leaf>
+     <attribute name="name" value="8"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="9"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="11"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Kazakhstan"/>
+    <leaf>
+     <attribute name="name" value="7"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="5"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Kyrgyzstan"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Latvia"/>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Lithuania"/>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Luxembourg"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Macedonia"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Moldova"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Monaco"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Montenegro"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Netherlands"/>
+    <leaf>
+     <attribute name="name" value="6"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="6"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="8"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Norway"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Poland"/>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="6"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Portugal"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Romania"/>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="5"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Russia"/>
+    <leaf>
+     <attribute name="name" value="24"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="26"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="32"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="San Marino"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Serbia"/>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Slovakia"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="3"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Slovenia"/>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Spain"/>
+    <leaf>
+     <attribute name="name" value="3"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="10"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="4"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Sweden"/>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="4"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="3"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Switzerland"/>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Tajikistan"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Turkey"/>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="2"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Turkmenistan"/>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Ukraine"/>
+    <leaf>
+     <attribute name="name" value="6"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="5"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="9"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="United Kingdom"/>
+    <leaf>
+     <attribute name="name" value="29"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="17"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="19"/>
+    </leaf>
+   </branch>
+   <branch>
+    <attribute name="name" value="Uzbekistan"/>
+    <leaf>
+     <attribute name="name" value="1"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="0"/>
+    </leaf>
+    <leaf>
+     <attribute name="name" value="3"/>
+    </leaf>
+   </branch>
+  </branch>
+ </branch>
+ </tree>
