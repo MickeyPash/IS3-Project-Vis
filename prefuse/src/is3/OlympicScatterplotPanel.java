@@ -30,7 +30,12 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 		
 		visualisation = new OlympicScatterplot(data);
 		
-		String[] fields = {"F2012", "M2012", "TeamSize", "Gold", "Silver", "Bronze"};
+		String[] fields = {"F2012", "M2012", "TeamSize", "Gold", "Silver", "Bronze",
+				"Adult literacy rate (%)", "Population (in thousands) total",
+				"Population median age (years)",
+				"Community and traditional health workers density (per 10 000 population)",
+				"General government expenditure on health as percentage of total expenditure on health",
+				"General government expenditure on health as percentage of total government expenditure"};
 		
 		ySelect = new JComboBox(fields);
 		ySelect.setSelectedIndex(3);
@@ -50,8 +55,11 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 		yControls.add(yTitle);
 		yControls.add(ySelect);
 		
-		add(xControls, BorderLayout.PAGE_END);
-		add(yControls, BorderLayout.WEST);
+		JPanel axisPanel = new JPanel(new BorderLayout());
+		axisPanel.add(xControls, BorderLayout.PAGE_END);
+		axisPanel.add(yControls, BorderLayout.PAGE_START);
+		
+		add(axisPanel, BorderLayout.PAGE_END);
 		
 		add(visualisation, BorderLayout.CENTER);
 
