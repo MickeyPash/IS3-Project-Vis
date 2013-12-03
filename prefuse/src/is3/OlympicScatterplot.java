@@ -97,7 +97,8 @@ public class OlympicScatterplot extends Display {
 		// Step 1: setup the visualised data
 
 		VisualTable vt = m_vis.addTable("data", table);
-
+		
+		// Column that will hold data for tooltip to use
 		vt.addColumn("label", "CONCAT([Country],': ', ' Gold: ', [Gold], ';  Silver: ', [Silver], ';  Bronze: ', [Bronze])");
 
 		// ------------------------------------------------------------------
