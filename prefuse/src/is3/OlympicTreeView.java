@@ -267,7 +267,7 @@ public class OlympicTreeView extends Display {
         }
         JComponent treeview = demo(infile, label);
         
-        JFrame frame = new JFrame("p r e f u s e  |  t r e e v i e w");
+        JFrame frame = new JFrame("Olympic Tree View");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setContentPane(treeview);
         frame.pack();
