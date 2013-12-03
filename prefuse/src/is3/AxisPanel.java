@@ -49,7 +49,7 @@ public class AxisPanel extends JPanel implements ActionListener {
         String field = (String)cb.getSelectedItem();
         if (d instanceof OlympicScatterplot) {
         	OlympicScatterplot s = (OlympicScatterplot) d;
-        	s.setYField(field);
+        	//s.setYField(field);
         	if (cb == ySelect) s.setYField(field);
         	else s.setXField(field);
         }
