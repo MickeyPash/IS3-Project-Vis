@@ -37,6 +37,11 @@ public class OlympicDataVisualiserFrame extends JFrame {
 	 * 
 	 */
 	public OlympicDataVisualiserFrame() {
+		
+		// TODO Add more views
+		// Map view (copy from demo?)
+		
+		// TODO filter data (sliders, checkboxes)
 
 		// This instantiates the classes based of the name in the
 		// visualisationOptions array

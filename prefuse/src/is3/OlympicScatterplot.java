@@ -87,6 +87,11 @@ public class OlympicScatterplot extends Display {
 		final Rectangle2D boundsData = new Rectangle2D.Double();
 		final Rectangle2D boundsLabelsX = new Rectangle2D.Double();
 		final Rectangle2D boundsLabelsY = new Rectangle2D.Double();
+		
+		// TODO Consider logarithmic scale for graph
+		// This would be a user option
+		// Look at this for possible implementation
+		// https://github.com/prefuse/Flare/blob/master/flare/src/flare/scale/LogScale.as
 
 		// ------------------------------------------------------------------
 		// Step 1: setup the visualised data
@@ -99,7 +104,7 @@ public class OlympicScatterplot extends Display {
 		// Step 2: setup renderers for visualised data
 
 		m_vis.setRendererFactory(new RendererFactory() {
-			AbstractShapeRenderer sr = new ShapeRenderer(7);
+			AbstractShapeRenderer sr = new ShapeRenderer();
 			Renderer arY = new AxisRenderer(Constants.FAR_LEFT, Constants.CENTER);
 			Renderer arX = new AxisRenderer(Constants.CENTER, Constants.FAR_BOTTOM);
 
@@ -151,6 +156,8 @@ public class OlympicScatterplot extends Display {
 		// Size of points determined by Population
 		// Makes points HUGE
         // DataSizeAction size = new DataSizeAction("data", "Population (in thousands) total");
+		
+		// TODO Background Image?
 
 		ActionList draw = new ActionList(Activity.INFINITY);
 		draw.add(x_axis);
