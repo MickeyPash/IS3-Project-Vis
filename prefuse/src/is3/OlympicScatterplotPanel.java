@@ -24,6 +24,7 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 	
 	private JComboBox xSelect;
 	private JComboBox ySelect;
+	private JComboBox sizeSelect;
 
 	public OlympicScatterplotPanel(String data){
 		setLayout(new BorderLayout());
@@ -45,8 +46,13 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 		xSelect.setSelectedIndex(2);
 		xSelect.addActionListener(this);
 		
+		sizeSelect = new JComboBox(fields);
+		sizeSelect.setSelectedIndex(7);
+		sizeSelect.addActionListener(this);
+		
 		JLabel xTitle = new JLabel("X-Axis");
 		JLabel yTitle = new JLabel("Y-Axis");
+		JLabel sizeTitle = new JLabel("Size of points");
 		
 		JPanel xControls = new JPanel(new FlowLayout());
 		xControls.add(xTitle);
@@ -54,10 +60,14 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 		JPanel yControls = new JPanel(new FlowLayout());
 		yControls.add(yTitle);
 		yControls.add(ySelect);
+		JPanel sizeControls = new JPanel(new FlowLayout());
+		sizeControls.add(sizeTitle);
+		sizeControls.add(sizeSelect);
 		
 		JPanel axisPanel = new JPanel(new BorderLayout());
 		axisPanel.add(xControls, BorderLayout.PAGE_END);
-		axisPanel.add(yControls, BorderLayout.PAGE_START);
+		axisPanel.add(yControls, BorderLayout.CENTER);
+		axisPanel.add(sizeControls, BorderLayout.PAGE_START);
 		
 		add(axisPanel, BorderLayout.PAGE_END);
 		
@@ -72,7 +82,8 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
         	OlympicScatterplot s = (OlympicScatterplot) visualisation;
         	//s.setYField(field);
         	if (cb == ySelect) s.setYField(field);
-        	else s.setXField(field);
+        	else if(cb == xSelect) s.setXField(field);
+        	else if(cb == sizeSelect) s.setDataSizeAction(field);
         }
     }
 }

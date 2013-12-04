@@ -39,6 +39,7 @@ public class OlympicScatterplot extends Display {
 	private Table table;
 	private AxisLayout x_axis;
 	private AxisLayout y_axis;
+	private DataSizeAction size;
 
 	public OlympicScatterplot(String csvfile) {
 
@@ -156,9 +157,8 @@ public class OlympicScatterplot extends Display {
 		
 		// Size of points determined by Population
 		// Makes points HUGE
-         DataSizeAction size = new DataSizeAction("data", "Population (in thousands) total", 500, Constants.LINEAR_SCALE);
+         size = new DataSizeAction("data", "Population (in thousands) total", 500, Constants.LINEAR_SCALE);
          size.setMaximumSize(25.0);
-         System.out.println();
 		
 		// TODO Background Image?
 
@@ -268,5 +268,8 @@ public class OlympicScatterplot extends Display {
 		y_axis.setDataField(field);
 		x_axis.setDataField(x_axis.getDataField());
 	}
-
+	
+	public void setDataSizeAction(String field){
+		size.setDataField(field);
+	}
 }
