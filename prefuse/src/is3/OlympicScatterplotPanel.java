@@ -29,14 +29,12 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 	private JComboBox xSelect;
 	private JComboBox ySelect;
 	private JComboBox sizeSelect;
-	private JComboBox filterSelect;
 	
 	private JLabel rangeSliderLabel1 = new JLabel();
     private JLabel rangeSliderValue1 = new JLabel();
     private JLabel rangeSliderLabel2 = new JLabel();
     private JLabel rangeSliderValue2 = new JLabel();
 	
-	private RangeSlider rangeFilter = new RangeSlider();
 
 	public OlympicScatterplotPanel(String data){
 		setLayout(new BorderLayout());
@@ -62,25 +60,10 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 		sizeSelect.setSelectedIndex(7);
 		sizeSelect.addActionListener(this);
 		
-		filterSelect = new JComboBox(fields);
-		filterSelect.setSelectedIndex(3);
-		filterSelect.addActionListener(this);
-		
 		rangeSliderLabel1.setText("Lower value:");
         rangeSliderLabel2.setText("Upper value:");
         rangeSliderValue1.setHorizontalAlignment(JLabel.LEFT);
         rangeSliderValue2.setHorizontalAlignment(JLabel.LEFT);
-		
-		rangeFilter.setPreferredSize(new Dimension(240, rangeFilter.getPreferredSize().height));
-	    rangeFilter.setMinimum(0);
-	    rangeFilter.setMaximum(10);
-	    rangeFilter.addChangeListener(new ChangeListener() {
-            public void stateChanged(ChangeEvent e) {
-                RangeSlider slider = (RangeSlider) e.getSource();
-                rangeSliderValue1.setText(String.valueOf(slider.getValue()));
-                rangeSliderValue2.setText(String.valueOf(slider.getUpperValue()));
-            }
-        });
 		
 		JLabel xTitle = new JLabel("X-Axis");
 		JLabel yTitle = new JLabel("Y-Axis");
@@ -97,12 +80,6 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 		JPanel sizeControls = new JPanel(new FlowLayout());
 		sizeControls.add(sizeTitle);
 		sizeControls.add(sizeSelect);
-		JPanel filterControls = new JPanel(new FlowLayout());
-		filterControls.add(filterTitle);
-		filterControls.add(filterSelect);
-		JPanel rangeControls = new JPanel(new FlowLayout());
-		rangeControls.add(rangeFilterTitle);
-		rangeControls.add(rangeFilter);
 		
 		JPanel axisPanel = new JPanel();
 		axisPanel.setLayout(new BoxLayout(axisPanel, BoxLayout.PAGE_AXIS));
@@ -110,8 +87,6 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 		axisPanel.add(sizeControls);
 		axisPanel.add(yControls);
 		axisPanel.add(xControls);
-		axisPanel.add(filterControls);
-		axisPanel.add(rangeControls);
 		
 		add(axisPanel, BorderLayout.PAGE_END);
 		
@@ -120,17 +95,14 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-        JComboBox cb = null;
-        cb = (JComboBox)e.getSource();
-        String field = "";
-        field = (String)cb.getSelectedItem();
+        JComboBox cb = (JComboBox)e.getSource();
+        String field = (String)cb.getSelectedItem();
         if (visualisation instanceof OlympicScatterplot) {
         	OlympicScatterplot s = (OlympicScatterplot) visualisation;
         	//s.setYField(field);
         	if (cb == ySelect) s.setYField(field);
         	else if(cb == xSelect) s.setXField(field);
         	else if(cb == sizeSelect) s.setDataSizeAction(field);
-        	else if(cb == filterSelect) s.changeFilter(field);
         }
     }
 	
