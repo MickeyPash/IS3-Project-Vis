@@ -4,13 +4,17 @@
 package is3;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.awt.Shape;
 
+import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -24,12 +28,30 @@ import prefuse.render.ShapeRenderer;
  * 
  */
 @SuppressWarnings("serial")
-public class OlympicScatterplotPanel extends JPanel implements ActionListener {
+public class OlympicScatterplotPanel extends JPanel implements ActionListener, ItemListener {
 	public Display visualisation;
 
-	private JComboBox<String> xSelect;
-	private JComboBox<String> ySelect;
-	private JComboBox<String> sizeSelect;
+	private JComboBox<String> xSelect, ySelect, sizeSelect;
+	private JCheckBox middleEast, europe, africa, northAmerica, southAmerica, oceania, asia;
+	
+	private Color[] colours = {
+			// Middle East
+			new Color(20, 120, 100, 125),
+			// Europe
+			new Color(105, 245, 40, 125),
+			// Africa
+			new Color(200, 200, 135, 125),
+			// North America
+			new Color(35, 50, 225, 125),
+			// South America
+			new Color(190, 115, 20, 125),
+			// Oceania & some Asia
+			new Color(95, 175, 210, 125),
+			// Asia
+			new Color(220, 15, 40, 125),
+			// Unselected
+			new Color(100, 100, 100)
+	};
 
 	private int[] palette = new int[] {
 			// Middle East
@@ -59,6 +81,16 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 		setLayout(new BorderLayout());
 
 		visualisation = new OlympicScatterplot(data);
+		
+		JCheckBox[] colourBoxes = {
+				middleEast = new JCheckBox(new ColouredCheckBoxIcon(new Color(palette[0], true)), true),
+				europe = new JCheckBox(new ColouredCheckBoxIcon(new Color(palette[1], true)), true),
+				africa = new JCheckBox(new ColouredCheckBoxIcon(new Color(palette[2], true)), true),
+				northAmerica = new JCheckBox(new ColouredCheckBoxIcon(new Color(palette[3], true)), true),
+				southAmerica = new JCheckBox(new ColouredCheckBoxIcon(new Color(palette[4], true)), true),
+				oceania = new JCheckBox(new ColouredCheckBoxIcon(new Color(palette[5], true)), true),
+				asia = new JCheckBox(new ColouredCheckBoxIcon(new Color(palette[6], true)), true)
+		};
 
 		String[] fields = {
 				"F2012",
@@ -115,12 +147,16 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 
 		JPanel colourLegend = new JPanel(new FlowLayout());
 
-		Box box;
+		JCheckBox colourBox;
+		// Box box;
 		JLabel label;
 		for(int i=0; i<palette.length; i++){
-			box = new Box(10, 10, palette[i]);
+			// box = new Box(10, 10, palette[i]);
 			label = new JLabel(continents[i]);
-			colourLegend.add(box);
+			// colourLegend.add(box);
+			colourBox = colourBoxes[i];
+			colourBox.addItemListener(this);
+			colourLegend.add(colourBox);
 			colourLegend.add(label);
 		}
 
@@ -149,5 +185,33 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 				s.setDataSizeAction(field);
 		}
 	}
+	
+	private void changeColour(JCheckBox box, int colourPos) {
+		if ( box.isSelected() ) ((ColouredCheckBoxIcon) box.getIcon()).setColour(colours[colourPos]);
+    	else ((ColouredCheckBoxIcon) box.getIcon()).setColour(colours[7]);
+    	box.getIcon().paintIcon(box, box.getGraphics(), box.getX(), box.getY());
+	}
+	
+	/** Listens to the check boxes. */
+    public void itemStateChanged(ItemEvent e) {
+    	
+        Object source = e.getItemSelectable();
+ 
+        if (source == middleEast) {
+        	changeColour(middleEast, 0);
+        } else if (source == europe) {
+        	changeColour(europe, 1);
+        } else if (source == africa) {
+        	changeColour(africa, 2);
+        } else if (source == northAmerica) {
+        	changeColour(northAmerica, 3);
+        } else if (source == southAmerica) {
+        	changeColour(southAmerica, 4);
+        } else if (source == oceania) {
+        	changeColour(oceania, 5);
+        } else if (source == asia) {
+        	changeColour(asia, 6);
+        }
+    }
 	
 }
