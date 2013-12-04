@@ -34,6 +34,7 @@ import prefuse.visual.VisualTable;
 import prefuse.visual.expression.VisiblePredicate;
 import prefuse.visual.sort.ItemSorter;
 
+@SuppressWarnings("serial")
 public class OlympicScatterplot extends Display {
 
 	private Table table;
@@ -59,9 +60,15 @@ public class OlympicScatterplot extends Display {
 		schema.addColumn("Adult literacy rate (%)", Double.class);
 		schema.addColumn("Population (in thousands) total", int.class);
 		schema.addColumn("Population median age (years)", int.class);
-		schema.addColumn("Community and traditional health workers density (per 10 000 population)", Double.class);
-		schema.addColumn("General government expenditure on health as percentage of total expenditure on health", int.class);
-		schema.addColumn("General government expenditure on health as percentage of total government expenditure", int.class);
+		schema.addColumn(
+				"Community and traditional health workers density (per 10 000 population)",
+				Double.class);
+		schema.addColumn(
+				"General government expenditure on health as percentage of total expenditure on health",
+				int.class);
+		schema.addColumn(
+				"General government expenditure on health as percentage of total government expenditure",
+				int.class);
 		schema.addColumn("F2012", int.class);
 		schema.addColumn("M2012", int.class);
 		schema.addColumn("TeamSize", int.class);
@@ -89,7 +96,7 @@ public class OlympicScatterplot extends Display {
 		final Rectangle2D boundsData = new Rectangle2D.Double();
 		final Rectangle2D boundsLabelsX = new Rectangle2D.Double();
 		final Rectangle2D boundsLabelsY = new Rectangle2D.Double();
-		
+
 		// TODO Consider logarithmic scale for graph
 		// This would be a user option
 		// Look at this for possible implementation
@@ -99,17 +106,21 @@ public class OlympicScatterplot extends Display {
 		// Step 1: setup the visualised data
 
 		VisualTable vt = m_vis.addTable("data", table);
-		
+
 		// Column that will hold data for tooltip to use
-		vt.addColumn("label", "CONCAT([Country],': ', ' Gold: ', [Gold], ';  Silver: ', [Silver], ';  Bronze: ', [Bronze])");
+		vt.addColumn(
+				"label",
+				"CONCAT([Country],': ', ' Gold: ', [Gold], ';  Silver: ', [Silver], ';  Bronze: ', [Bronze])");
 
 		// ------------------------------------------------------------------
 		// Step 2: setup renderers for visualised data
 
 		m_vis.setRendererFactory(new RendererFactory() {
 			AbstractShapeRenderer sr = new ShapeRenderer();
-			Renderer arY = new AxisRenderer(Constants.FAR_LEFT, Constants.CENTER);
-			Renderer arX = new AxisRenderer(Constants.CENTER, Constants.FAR_BOTTOM);
+			Renderer arY = new AxisRenderer(Constants.FAR_LEFT,
+					Constants.CENTER);
+			Renderer arX = new AxisRenderer(Constants.CENTER,
+					Constants.FAR_BOTTOM);
 
 			public Renderer getRenderer(VisualItem item) {
 				return item.isInGroup("ylab") ? arY
@@ -150,17 +161,19 @@ public class OlympicScatterplot extends Display {
 				// Asia
 				ColorLib.rgba(220, 15, 40, 125) };
 
-		DataColorAction fill = new DataColorAction("data", "Continent", Constants.NOMINAL, VisualItem.FILLCOLOR, palette);
-		
+		DataColorAction fill = new DataColorAction("data", "Continent",
+				Constants.NOMINAL, VisualItem.FILLCOLOR, palette);
+
 		// Make points hexagons
 		int[] shapes = new int[] { Constants.SHAPE_HEXAGON };
 		DataShapeAction shape = new DataShapeAction("data", "Country", shapes);
-		
+
 		// Size of points determined by Population
 		// Makes points HUGE
-         size = new DataSizeAction("data", "Population (in thousands) total", 0, Constants.LINEAR_SCALE);
-         size.setMaximumSize(maxSize);
-		
+		size = new DataSizeAction("data", "Population (in thousands) total", 0,
+				Constants.LINEAR_SCALE);
+		size.setMaximumSize(maxSize);
+
 		// TODO Background Image?
 
 		ActionList draw = new ActionList(Activity.INFINITY);
@@ -168,7 +181,7 @@ public class OlympicScatterplot extends Display {
 		draw.add(y_axis);
 		draw.add(x_labels);
 		draw.add(y_labels);
-        draw.add(size);
+		draw.add(size);
 		draw.add(shape);
 		draw.add(fill);
 		draw.add(new RepaintAction());
@@ -176,7 +189,7 @@ public class OlympicScatterplot extends Display {
 
 		// ------------------------------------------------------------------
 		// Step 4: Setup a display and controls
-		
+
 		setHighQuality(true);
 		// set display size
 		setSize(720, 500);
@@ -269,8 +282,8 @@ public class OlympicScatterplot extends Display {
 		y_axis.setDataField(field);
 		x_axis.setDataField(x_axis.getDataField());
 	}
-	
-	public void setDataSizeAction(String field){
+
+	public void setDataSizeAction(String field) {
 		size.setDataField(field);
 	}
 }

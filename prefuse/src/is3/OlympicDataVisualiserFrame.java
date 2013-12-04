@@ -14,23 +14,22 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import prefuse.Display;
-import prefuse.demos.ScatterPlot;
-
 /**
  * @author Michael
  * 
  */
+@SuppressWarnings("serial")
 public class OlympicDataVisualiserFrame extends JFrame {
 
 	// This is the location of the data, This is passed into the constructor of
 	// every visualisation
 	private String data = "/WrangledData.csv";
-	
+
 	// This is a String array of the names of visualisations. These names must
 	// match the name of the visualisation class (whitespace is allowed)
-	private String[] visualisationOptions = { "Olympic Scatterplot", "Olympic Tree View" };
-	
+	private String[] visualisationOptions = { "Olympic Scatterplot",
+			"Olympic Tree View" };
+
 	// This is the array the visualisations will be added to when the program
 	// runs. Each visualisation will then be hidden/shown
 	private ArrayList<JPanel> visualisations = new ArrayList<JPanel>();
@@ -39,10 +38,10 @@ public class OlympicDataVisualiserFrame extends JFrame {
 	 * 
 	 */
 	public OlympicDataVisualiserFrame() {
-		
+
 		// TODO Add more views
 		// Map view (copy from demo?)
-		
+
 		// TODO filter data (sliders, checkboxes)
 
 		// This instantiates the classes based of the name in the
@@ -54,7 +53,7 @@ public class OlympicDataVisualiserFrame extends JFrame {
 			Constructor<?> constructor;
 			try {
 				clazz = Class.forName("is3."
-						+ visualisation.replaceAll("\\s+", "")+"Panel");
+						+ visualisation.replaceAll("\\s+", "") + "Panel");
 				constructor = clazz.getConstructor(String.class);
 				visualisations.add((JPanel) constructor.newInstance(data));
 			} catch (ClassNotFoundException | NoSuchMethodException
