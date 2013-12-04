@@ -61,7 +61,7 @@ import prefuse.visual.sort.TreeDepthItemSorter;
 /**
  * Demonstration of a node-link tree viewer
  * 
- * @version 1.0
+ * @version 2.0
  * @author <a href="http://jheer.org">jeffrey heer</a>
  */
 @SuppressWarnings("serial")
@@ -73,41 +73,7 @@ public class OlympicTreeView extends Display {
 	private static final String treeNodes = "tree.nodes";
 	private static final String treeEdges = "tree.edges";
 
-	public static String getTreeChi() {
-		return TREE_CHI;
-	}
-
-	public static String getTree() {
-		return tree;
-	}
-
-	public static String getTreenodes() {
-		return treeNodes;
-	}
-
-	public static String getTreeedges() {
-		return treeEdges;
-	}
-
-	public LabelRenderer getM_nodeRenderer() {
-		return m_nodeRenderer;
-	}
-
-	public EdgeRenderer getM_edgeRenderer() {
-		return m_edgeRenderer;
-	}
-
-	public String getM_label() {
-		return m_label;
-	}
-
-	public int getM_orientation() {
-		return m_orientation;
-	}
-
-	public static Tree getT() {
-		return t;
-	}
+	
 
 	private LabelRenderer m_nodeRenderer;
 	private EdgeRenderer m_edgeRenderer;
@@ -221,7 +187,8 @@ public class OlympicTreeView extends Display {
 		// ------------------------------------------------
 
 		// initialise the display
-		setSize(700, 600);
+		//setSize(this.size());
+		setSize(2560, 1440);
 		setItemSorter(new TreeDepthItemSorter());
 		addControlListener(new ZoomToFitControl());
 		addControlListener(new ZoomControl());
@@ -310,90 +277,6 @@ public class OlympicTreeView extends Display {
 
 	// ------------------------------------------------------------------------
 
-	// public static void main(String argv[]) {
-	// String infile = TREE_CHI;
-	// String label = "name";
-	// if ( argv.length > 1 ) {
-	// infile = argv[0];
-	// label = argv[1];
-	// }
-	// JComponent treeview = demo(infile, label);
-	//
-	// JFrame frame = new JFrame("Olympic Tree View");
-	// frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	// frame.setContentPane(treeview);
-	// frame.pack();
-	// frame.setVisible(true);
-	// }
-
-	public static JComponent demo() {
-		return demo(TREE_CHI, "name");
-	}
-
-	public static JComponent demo(String datafile, final String label) {
-		Color BACKGROUND = Color.WHITE;
-		Color FOREGROUND = Color.BLACK;
-
-		t = null;
-
-		try {
-			t = (Tree) new TreeMLReader().readGraph(datafile);
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.exit(1);
-		}
-
-		// create a new treemap
-		final OlympicTreeView tview = new OlympicTreeView(label);
-		tview.setBackground(BACKGROUND);
-		tview.setForeground(FOREGROUND);
-
-		// create a search panel for the tree map
-		JSearchPanel search = new JSearchPanel(tview.getVisualization(),
-				treeNodes, Visualization.SEARCH_ITEMS, label, true, true);
-		search.setShowResultCount(true);
-		search.setBorder(BorderFactory.createEmptyBorder(5, 5, 4, 0));
-		search.setFont(FontLib.getFont("Tahoma", Font.PLAIN, 11));
-		search.setBackground(BACKGROUND);
-		search.setForeground(FOREGROUND);
-
-		final JFastLabel title = new JFastLabel("                 ");
-		title.setPreferredSize(new Dimension(350, 20));
-		title.setVerticalAlignment(SwingConstants.BOTTOM);
-		title.setBorder(BorderFactory.createEmptyBorder(3, 0, 0, 0));
-		title.setFont(FontLib.getFont("Tahoma", Font.PLAIN, 16));
-		title.setBackground(BACKGROUND);
-		title.setForeground(FOREGROUND);
-
-		tview.addControlListener(new ControlAdapter() {
-			public void itemEntered(VisualItem item, MouseEvent e) {
-				if (item.canGetString(label))
-					title.setText(item.getString(label));
-			}
-
-			public void itemExited(VisualItem item, MouseEvent e) {
-				title.setText(null);
-			}
-		});
-
-		Box box = new Box(BoxLayout.X_AXIS);
-		box.add(Box.createHorizontalStrut(10));
-		box.add(title);
-		box.add(Box.createHorizontalGlue());
-		box.add(search);
-		box.add(Box.createHorizontalStrut(3));
-		box.setBackground(BACKGROUND);
-
-		JPanel panel = new JPanel(new BorderLayout());
-		panel.setBackground(BACKGROUND);
-		panel.setForeground(FOREGROUND);
-		panel.add(tview, BorderLayout.CENTER);
-		panel.add(box, BorderLayout.SOUTH);
-		return panel;
-	}
-
-	// ------------------------------------------------------------------------
-
 	public class OrientAction extends AbstractAction {
 		private int orientation;
 
@@ -419,12 +302,12 @@ public class OlympicTreeView extends Display {
 
 		public void run(double frac) {
 			TupleSet ts = m_vis.getFocusGroup(Visualization.FOCUS_ITEMS);
-			// System.out.println(ts.getTupleCount());
+
 			counter = (counter + 1) % 9;
-			// System.out.println(counter);
+
 			if (ts.getTupleCount() == 0)
 				return;
-			// System.out.println(frac);
+
 			if (counter == 8) {
 				int xbias = 0, ybias = 0;
 				switch (m_orientation) {
@@ -444,17 +327,12 @@ public class OlympicTreeView extends Display {
 
 				VisualItem vi = (VisualItem) ts.tuples().next();
 				m_cur.setLocation(getWidth() / 2, getHeight() / 2);
-				// System.out.println((getWidth()/2 + "   " + getHeight()/2));
 				getAbsoluteCoordinate(m_cur, m_start);
 				m_end.setLocation(vi.getX() + xbias, vi.getY() + ybias);
 			} else {
-				// System.out.println(frac);
 				m_cur.setLocation(m_start.getX() + frac
 						* (m_end.getX() - m_start.getX()), m_start.getY()
 						+ frac * (m_end.getY() - m_start.getY()));
-				// System.out.println("LOL HERES");
-				// System.out.println(m_start);
-				// System.out.println(m_end);
 				panToAbs(m_cur);
 			}
 		}
@@ -477,6 +355,42 @@ public class OlympicTreeView extends Display {
 				return ColorLib.rgba(255, 255, 255, 0);
 		}
 
-	} // end of inner class TreeMapColorAction
+	}
+	
+	public static String getTreeChi() {
+		return TREE_CHI;
+	}
+
+	public static String getTree() {
+		return tree;
+	}
+
+	public static String getTreenodes() {
+		return treeNodes;
+	}
+
+	public static String getTreeedges() {
+		return treeEdges;
+	}
+
+	public LabelRenderer getM_nodeRenderer() {
+		return m_nodeRenderer;
+	}
+
+	public EdgeRenderer getM_edgeRenderer() {
+		return m_edgeRenderer;
+	}
+
+	public String getM_label() {
+		return m_label;
+	}
+
+	public int getM_orientation() {
+		return m_orientation;
+	}
+
+	public static Tree getT() {
+		return t;
+	}// end of inner class TreeMapColorAction
 
 } // end of class TreeMap
