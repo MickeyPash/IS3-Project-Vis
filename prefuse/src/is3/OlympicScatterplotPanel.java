@@ -5,6 +5,7 @@ package is3;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -45,6 +46,14 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 			ColorLib.rgba(95, 175, 210, 125),
 			// Asia
 			ColorLib.rgba(220, 15, 40, 125) };
+	private String[] continents = new String[] {
+			 "Middle East",
+			 "Europe",
+			 "Africa",
+			 "North America",
+			 "South America",
+			 "Oceania & some Asia",
+			 "Asia"};
 
 	public OlympicScatterplotPanel(String data) {
 		setLayout(new BorderLayout());
@@ -65,13 +74,13 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 				"General government expenditure on health as percentage of total expenditure on health",
 				"General government expenditure on health as percentage of total government expenditure"};
 		
-		String [] fields_plus_none = {"F2012", "M2012", "TeamSize", "Gold", "Silver", "Bronze",
+		String [] fields_plus_none = {"None", 
+				"F2012", "M2012", "TeamSize", "Gold", "Silver", "Bronze",
 				"Adult literacy rate (%)", "Population (in thousands) total",
 				"Population median age (years)",
 				"Community and traditional health workers density (per 10 000 population)",
 				"General government expenditure on health as percentage of total expenditure on health",
-				"General government expenditure on health as percentage of total government expenditure",
-				"None"};
+				"General government expenditure on health as percentage of total government expenditure"};
 		
 		ySelect = new JComboBox<String>(fields);
 		ySelect.setSelectedIndex(3);
@@ -82,7 +91,7 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 		xSelect.addActionListener(this);
 		
 		sizeSelect = new JComboBox<String>(fields_plus_none);
-		sizeSelect.setSelectedIndex(7);
+		sizeSelect.setSelectedIndex(0);
 		sizeSelect.addActionListener(this);
 
 		JLabel xTitle = new JLabel("X-Axis");
@@ -104,10 +113,16 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 		dropDownMenus.add(xControls);
 		dropDownMenus.add(sizeControls);
 
-		// ShapeRenderer shape = new ShapeRenderer();
-		// dropDownMenus.add((Component)shape.rectangle(0.0, 0.0, 2, 2));
-
 		JPanel colourLegend = new JPanel(new FlowLayout());
+
+		Box box;
+		JLabel label;
+		for(int i=0; i<palette.length; i++){
+			box = new Box(10, 10, palette[i]);
+			label = new JLabel(continents[i]);
+			colourLegend.add(box);
+			colourLegend.add(label);
+		}
 
 		JPanel axisPanel = new JPanel(new BorderLayout());
 		axisPanel.add(dropDownMenus, BorderLayout.PAGE_END);
@@ -134,4 +149,5 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 				s.setDataSizeAction(field);
 		}
 	}
+	
 }

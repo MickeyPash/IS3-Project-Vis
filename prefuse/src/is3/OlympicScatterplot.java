@@ -172,7 +172,8 @@ public class OlympicScatterplot extends Display {
 
 		size = new DataSizeAction("data", "Population (in thousands) total", 0,
 				Constants.LINEAR_SCALE);
-		size.setMaximumSize(5.0);
+		size.setMinimumSize(1.0);
+		size.setMaximumSize(1.0);
 
 		// TODO Background Image?
 
@@ -291,6 +292,7 @@ public class OlympicScatterplot extends Display {
 		}
 		else{
 			size.setMinimumSize(0.2);
+			size.setMaximumSize(5.0);
 			size.setDataField(field);
 		}
 	}
