@@ -8,12 +8,15 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Shape;
 
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import prefuse.Display;
+import prefuse.util.ColorLib;
+import prefuse.render.ShapeRenderer;
 
 /**
  * @author Michael
@@ -25,6 +28,22 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 	private JComboBox xSelect;
 	private JComboBox ySelect;
 	private JComboBox sizeSelect;
+	
+	private int[] palette = new int[] {
+			// Middle East
+			ColorLib.rgba(20, 120, 100, 125),
+			// Europe
+			ColorLib.rgba(105, 245, 40, 125),
+			// Africa
+			ColorLib.rgba(200, 200, 135, 125),
+			// North America
+			ColorLib.rgba(35, 50, 225, 125),
+			// South America
+			ColorLib.rgba(190, 115, 20, 125),
+			// Oceania & some Asia
+			ColorLib.rgba(95, 175, 210, 125),
+			// Asia
+			ColorLib.rgba(220, 15, 40, 125) };
 
 	public OlympicScatterplotPanel(String data){
 		setLayout(new BorderLayout());
@@ -64,10 +83,19 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 		sizeControls.add(sizeTitle);
 		sizeControls.add(sizeSelect);
 		
+		JPanel dropDownMenus = new JPanel(new GridLayout(0,1));
+		dropDownMenus.add(yControls);
+		dropDownMenus.add(xControls);
+		dropDownMenus.add(sizeControls);
+		
+//		ShapeRenderer shape = new ShapeRenderer();
+//		dropDownMenus.add((Component)shape.rectangle(0.0, 0.0, 2, 2));
+		
+		JPanel colourLegend = new JPanel(new FlowLayout());
+		
 		JPanel axisPanel = new JPanel(new BorderLayout());
-		axisPanel.add(xControls, BorderLayout.PAGE_END);
-		axisPanel.add(yControls, BorderLayout.CENTER);
-		axisPanel.add(sizeControls, BorderLayout.PAGE_START);
+		axisPanel.add(dropDownMenus, BorderLayout.PAGE_END);
+		axisPanel.add(colourLegend, BorderLayout.PAGE_START);
 		
 		add(axisPanel, BorderLayout.PAGE_END);
 		

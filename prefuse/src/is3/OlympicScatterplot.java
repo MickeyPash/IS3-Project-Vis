@@ -40,7 +40,6 @@ public class OlympicScatterplot extends Display {
 	private AxisLayout x_axis;
 	private AxisLayout y_axis;
 	private DataSizeAction size;
-	public Double maxSize = 5.0;
 
 	public OlympicScatterplot(String csvfile) {
 
@@ -159,7 +158,7 @@ public class OlympicScatterplot extends Display {
 		// Size of points determined by Population
 		// Makes points HUGE
          size = new DataSizeAction("data", "Population (in thousands) total", 0, Constants.LINEAR_SCALE);
-         size.setMaximumSize(maxSize);
+         size.setMaximumSize(5.0);
 		
 		// TODO Background Image?
 
