@@ -52,22 +52,6 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener, I
 			// Unselected
 			new Color(100, 100, 100)
 	};
-
-	private int[] palette = new int[] {
-			// Middle East
-			ColorLib.rgba(20, 120, 100, 125),
-			// Europe
-			ColorLib.rgba(105, 245, 40, 125),
-			// Africa
-			ColorLib.rgba(200, 200, 135, 125),
-			// North America
-			ColorLib.rgba(35, 50, 225, 125),
-			// South America
-			ColorLib.rgba(190, 115, 20, 125),
-			// Oceania & some Asia
-			ColorLib.rgba(95, 175, 210, 125),
-			// Asia
-			ColorLib.rgba(220, 15, 40, 125) };
 	private String[] continents = new String[] {
 			 "Middle East",
 			 "Europe",
@@ -83,13 +67,13 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener, I
 		visualisation = new OlympicScatterplot(data);
 		
 		JCheckBox[] colourBoxes = {
-				middleEast = new JCheckBox(new ColouredCheckBoxIcon(new Color(palette[0], true)), true),
-				europe = new JCheckBox(new ColouredCheckBoxIcon(new Color(palette[1], true)), true),
-				africa = new JCheckBox(new ColouredCheckBoxIcon(new Color(palette[2], true)), true),
-				northAmerica = new JCheckBox(new ColouredCheckBoxIcon(new Color(palette[3], true)), true),
-				southAmerica = new JCheckBox(new ColouredCheckBoxIcon(new Color(palette[4], true)), true),
-				oceania = new JCheckBox(new ColouredCheckBoxIcon(new Color(palette[5], true)), true),
-				asia = new JCheckBox(new ColouredCheckBoxIcon(new Color(palette[6], true)), true)
+				middleEast = new JCheckBox(new ColouredCheckBoxIcon(colours[0]), true),
+				europe = new JCheckBox(new ColouredCheckBoxIcon(colours[1]), true),
+				africa = new JCheckBox(new ColouredCheckBoxIcon(colours[2]), true),
+				northAmerica = new JCheckBox(new ColouredCheckBoxIcon(colours[3]), true),
+				southAmerica = new JCheckBox(new ColouredCheckBoxIcon(colours[4]), true),
+				oceania = new JCheckBox(new ColouredCheckBoxIcon(colours[5]), true),
+				asia = new JCheckBox(new ColouredCheckBoxIcon(colours[6]), true)
 		};
 
 		String[] fields = {
@@ -148,10 +132,8 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener, I
 		JPanel colourLegend = new JPanel(new FlowLayout());
 
 		JCheckBox colourBox;
-		// Box box;
 		JLabel label;
-		for(int i=0; i<palette.length; i++){
-			// box = new Box(10, 10, palette[i]);
+		for(int i=0; i<continents.length; i++){
 			label = new JLabel(continents[i]);
 			// colourLegend.add(box);
 			colourBox = colourBoxes[i];
