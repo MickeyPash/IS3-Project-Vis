@@ -270,6 +270,13 @@ public class OlympicScatterplot extends Display {
 	}
 	
 	public void setDataSizeAction(String field){
-		size.setDataField(field);
+		if (field.equals("None")){
+			size.setMinimumSize(1.0);
+			size.setMaximumSize(1.0);
+		}
+		else{
+			size.setMinimumSize(0.2);
+			size.setDataField(field);
+		}
 	}
 }

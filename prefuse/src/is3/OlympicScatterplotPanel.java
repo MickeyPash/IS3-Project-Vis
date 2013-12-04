@@ -57,6 +57,14 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 				"General government expenditure on health as percentage of total expenditure on health",
 				"General government expenditure on health as percentage of total government expenditure"};
 		
+		String [] fields_plus_none = {"F2012", "M2012", "TeamSize", "Gold", "Silver", "Bronze",
+				"Adult literacy rate (%)", "Population (in thousands) total",
+				"Population median age (years)",
+				"Community and traditional health workers density (per 10 000 population)",
+				"General government expenditure on health as percentage of total expenditure on health",
+				"General government expenditure on health as percentage of total government expenditure",
+				"None"};
+		
 		ySelect = new JComboBox(fields);
 		ySelect.setSelectedIndex(3);
 		ySelect.addActionListener(this);
@@ -65,7 +73,7 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener {
 		xSelect.setSelectedIndex(2);
 		xSelect.addActionListener(this);
 		
-		sizeSelect = new JComboBox(fields);
+		sizeSelect = new JComboBox(fields_plus_none);
 		sizeSelect.setSelectedIndex(7);
 		sizeSelect.addActionListener(this);
 		
