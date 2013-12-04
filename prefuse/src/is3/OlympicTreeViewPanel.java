@@ -3,6 +3,8 @@
  */
 package is3;
 
+import is3.OlympicTreeView.OrientAction;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -19,11 +21,15 @@ import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.KeyStroke;
 import javax.swing.SwingConstants;
 
+import prefuse.Constants;
 import prefuse.Visualization;
 import prefuse.controls.ControlAdapter;
 import prefuse.demos.TreeView;
+import prefuse.render.EdgeRenderer;
+import prefuse.render.LabelRenderer;
 import prefuse.util.FontLib;
 import prefuse.util.ui.JFastLabel;
 import prefuse.util.ui.JSearchPanel;
@@ -33,23 +39,51 @@ import prefuse.visual.VisualItem;
  * @author Michael
  *
  */
+
+
 public class OlympicTreeViewPanel extends JPanel {
 	public OlympicTreeView visualisation;
 
 	public OlympicTreeViewPanel(String data) throws IOException{
+		
+		
+	   
+	    
+	    final String tree = "tree";
+	    final String treeNodes = "tree.nodes";
+	    final String treeEdges = "tree.edges";
+	    
+	    LabelRenderer m_nodeRenderer;
+	    EdgeRenderer m_edgeRenderer;
+	    
+	    String m_label = "label";
+	    int m_orientation = Constants.ORIENT_LEFT_RIGHT;
+		
 		//setLayout(new BorderLayout());
 		//setLayout(new Box(BoxLayout.X_AXIS);
 		BoxLayout l = new BoxLayout(this, BoxLayout.X_AXIS);
-       // Color BACKGROUND = Color.WHITE;
+        Color BACKGROUND = Color.WHITE;
         Color FOREGROUND = Color.BLACK;
         final String label = "name";
-        String treeNodes = "tree.nodes";
+        
 		visualisation = new OlympicTreeView(data);
 		//OlympicTreeView tview = visualisation.getT();
 		
 	//	add(visualisation, BorderLayout.CENTER);
 		
-		
+//		visualisation.registerKeyboardAction(
+//	            visualisation.new OrientAction(Constants.ORIENT_LEFT_RIGHT),
+//	            "left-to-right", KeyStroke.getKeyStroke("ctrl 1"), WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+//	    visualisation.registerKeyboardAction(
+//	            visualisation.new OrientAction(Constants.ORIENT_TOP_BOTTOM),
+//	            "top-to-bottom", KeyStroke.getKeyStroke("ctrl 2"), WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+//	    visualisation.registerKeyboardAction(
+//	            visualisation.new OrientAction(Constants.ORIENT_RIGHT_LEFT),
+//	            "right-to-left", KeyStroke.getKeyStroke("ctrl 3"), WHEN_FOCUSED);
+//	    visualisation.registerKeyboardAction(
+//	            visualisation.new OrientAction(Constants.ORIENT_BOTTOM_TOP),
+//	            "bottom-to-top", KeyStroke.getKeyStroke("ctrl 4"), WHEN_FOCUSED);
+	        
 
 		
 		//visualisation.setBackground(BACKGROUND);
@@ -61,7 +95,7 @@ public class OlympicTreeViewPanel extends JPanel {
         search.setShowResultCount(true);
         search.setBorder(BorderFactory.createEmptyBorder(5,5,4,0));
         search.setFont(FontLib.getFont("Tahoma", Font.PLAIN, 11));
-      //  search.setBackground(BACKGROUND);
+        search.setBackground(BACKGROUND);
         search.setForeground(FOREGROUND);
         
         final JFastLabel title = new JFastLabel("                 ");
@@ -69,7 +103,7 @@ public class OlympicTreeViewPanel extends JPanel {
         title.setVerticalAlignment(SwingConstants.BOTTOM);
         title.setBorder(BorderFactory.createEmptyBorder(3,0,0,0));
         title.setFont(FontLib.getFont("Tahoma", Font.PLAIN, 16));
-       // title.setBackground(BACKGROUND);
+        title.setBackground(BACKGROUND);
         title.setForeground(FOREGROUND);
         
         visualisation.addControlListener(new ControlAdapter() {
@@ -88,7 +122,7 @@ public class OlympicTreeViewPanel extends JPanel {
         box.add(Box.createHorizontalGlue());
         box.add(search);
         box.add(Box.createHorizontalStrut(3));
-      //  box.setBackground(BACKGROUND);
+        box.setBackground(BACKGROUND);
         //this.add
         
         Image image = ImageIO.read(new File(System.getProperty("user.dir") + "/data/freedom1.jpg"));
@@ -98,14 +132,15 @@ public class OlympicTreeViewPanel extends JPanel {
 //        panel.setLayout(new BorderLayout());
         
         JPanel panel = new JPanel(new BorderLayout());
-      //  panel.setBackground(BACKGROUND);
-      //  panel.setForeground(FOREGROUND);
+        panel.setPreferredSize(new Dimension(1280, 720));
+        panel.setBackground(BACKGROUND);
+        panel.setForeground(FOREGROUND);
         visualisation.setBackgroundImage(image, true, false);
         panel.add(visualisation, BorderLayout.CENTER);
         panel.add(box, BorderLayout.SOUTH);
      //   panel.getPreferredSize();
         System.out.println(panel.getPreferredSize());
-        panel.setPreferredSize(new Dimension(1366, 768));
+        
         
 //		JLabel label1 = new JLabel();  
 //		System.out.println("ASDASDASDASDAS");

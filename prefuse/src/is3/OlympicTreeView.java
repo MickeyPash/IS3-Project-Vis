@@ -187,8 +187,8 @@ public class OlympicTreeView extends Display {
         
         // create the filtering and layout
         ActionList filter = new ActionList();
-        filter.add(new FisheyeTreeFilter(tree, 2));
-        filter.add(new FontAction(treeNodes, FontLib.getFont("Tahoma", 16)));
+        filter.add(new FisheyeTreeFilter(tree, 1)); //this is where i fixed the expanding issue
+        filter.add(new FontAction(treeNodes, FontLib.getFont("Tahoma", Font.BOLD, 16)));
         filter.add(treeLayout);
         filter.add(subLayout);
         filter.add(textColor);
@@ -230,16 +230,16 @@ public class OlympicTreeView extends Display {
         
         registerKeyboardAction(
             new OrientAction(Constants.ORIENT_LEFT_RIGHT),
-            "left-to-right", KeyStroke.getKeyStroke("ctrl 1"), WHEN_FOCUSED);
+            "left-to-right", KeyStroke.getKeyStroke("ctrl 1"), WHEN_IN_FOCUSED_WINDOW );
         registerKeyboardAction(
             new OrientAction(Constants.ORIENT_TOP_BOTTOM),
-            "top-to-bottom", KeyStroke.getKeyStroke("ctrl 2"), WHEN_FOCUSED);
+            "top-to-bottom", KeyStroke.getKeyStroke("ctrl 2"), WHEN_IN_FOCUSED_WINDOW );
         registerKeyboardAction(
             new OrientAction(Constants.ORIENT_RIGHT_LEFT),
-            "right-to-left", KeyStroke.getKeyStroke("ctrl 3"), WHEN_FOCUSED);
+            "right-to-left", KeyStroke.getKeyStroke("ctrl 3"), WHEN_IN_FOCUSED_WINDOW );
         registerKeyboardAction(
             new OrientAction(Constants.ORIENT_BOTTOM_TOP),
-            "bottom-to-top", KeyStroke.getKeyStroke("ctrl 4"), WHEN_FOCUSED);
+            "bottom-to-top", KeyStroke.getKeyStroke("ctrl 4"), WHEN_IN_FOCUSED_WINDOW );
         
         // ------------------------------------------------
         
@@ -412,12 +412,17 @@ public class OlympicTreeView extends Display {
         private Point2D m_cur   = new Point2D.Double();
         private int     m_bias  = 150;
         
+        private int counter = 0;
+        
         public void run(double frac) {
             TupleSet ts = m_vis.getFocusGroup(Visualization.FOCUS_ITEMS);
+          //  System.out.println(ts.getTupleCount());
+            counter = (counter + 1) % 9;
+       //     System.out.println(counter);
             if ( ts.getTupleCount() == 0 )
                 return;
-            
-            if ( frac == 0.0 ) {
+        //    System.out.println(frac);
+            if ( counter == 8 ) {
                 int xbias=0, ybias=0;
                 switch ( m_orientation ) {
                 case Constants.ORIENT_LEFT_RIGHT:
@@ -436,11 +441,16 @@ public class OlympicTreeView extends Display {
 
                 VisualItem vi = (VisualItem)ts.tuples().next();
                 m_cur.setLocation(getWidth()/2, getHeight()/2);
+             //   System.out.println((getWidth()/2 + "   " + getHeight()/2));
                 getAbsoluteCoordinate(m_cur, m_start);
                 m_end.setLocation(vi.getX()+xbias, vi.getY()+ybias);
             } else {
+            //	System.out.println(frac);
                 m_cur.setLocation(m_start.getX() + frac*(m_end.getX()-m_start.getX()),
                                   m_start.getY() + frac*(m_end.getY()-m_start.getY()));
+              //  System.out.println("LOL HERES");
+             //   System.out.println(m_start);
+             //   System.out.println(m_end);
                 panToAbs(m_cur);
             }
         }
