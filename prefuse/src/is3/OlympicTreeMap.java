@@ -106,7 +106,6 @@ public class OlympicTreeMap extends Display {
         Predicate labelP = (Predicate)ExpressionParser.parse("treedepth()=2");
         // now create the labels as decorators of the nodes
         m_vis.addDecorators(labels, treeNodes, labelP, LABEL_SCHEMA);
-        
         // set up the renderers - one for nodes and one for labels
         DefaultRendererFactory rf = new DefaultRendererFactory();
         rf.add(new InGroupPredicate(treeNodes), new NodeRenderer());
@@ -131,7 +130,9 @@ public class OlympicTreeMap extends Display {
         
         // create the single filtering and layout action list
         ActionList layout = new ActionList();
-        layout.add(new SquarifiedTreeMapLayout(tree));
+        SquarifiedTreeMapLayout ttree = new SquarifiedTreeMapLayout(tree);
+        ttree.setFrameWidth(2);
+        layout.add(ttree);
         layout.add(new LabelLayout(labels));
         layout.add(colors);
         layout.add(new RepaintAction());
@@ -237,9 +238,9 @@ public class OlympicTreeMap extends Display {
             
             int depth = nitem.getDepth();
             if ( depth < 2 ) {
-                return ColorLib.gray(100);
+                return ColorLib.red(100);
             } else if ( depth < 4 ) {
-                return ColorLib.gray(75);
+                return ColorLib.green(75);
             } else {
                 return ColorLib.gray(50);
             }
@@ -254,7 +255,7 @@ public class OlympicTreeMap extends Display {
     public static class FillColorAction extends ColorAction {
         private ColorMap cmap = new ColorMap(
             ColorLib.getInterpolatedPalette(10,
-                ColorLib.rgb(85,85,85), ColorLib.rgb(0,0,0)), 0, 9);
+                ColorLib.rgb(85,25,15), ColorLib.rgb(0,0,0)), 0, 9);
 
         public FillColorAction(String group) {
             super(group, VisualItem.FILLCOLOR);
