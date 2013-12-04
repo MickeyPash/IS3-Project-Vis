@@ -5,7 +5,7 @@ package is3;
 
 /**
  * @author Michael
- *
+ * 
  */
 public class OlympicDataVisualiser {
 
