@@ -15,6 +15,7 @@ import prefuse.action.assignment.DataShapeAction;
 import prefuse.action.assignment.DataSizeAction;
 import prefuse.action.layout.AxisLabelLayout;
 import prefuse.action.layout.AxisLayout;
+import prefuse.action.filter.*;
 import prefuse.activity.Activity;
 import prefuse.controls.PanControl;
 import prefuse.controls.ToolTipControl;
@@ -23,6 +24,8 @@ import prefuse.data.Schema;
 import prefuse.data.Table;
 import prefuse.data.io.CSVTableReader;
 import prefuse.data.io.DataIOException;
+import prefuse.data.expression.*;
+import prefuse.data.expression.parser.ExpressionParser;
 import prefuse.render.AbstractShapeRenderer;
 import prefuse.render.AxisRenderer;
 import prefuse.render.Renderer;
@@ -40,6 +43,8 @@ public class OlympicScatterplot extends Display {
 	private AxisLayout x_axis;
 	private AxisLayout y_axis;
 	private DataSizeAction size;
+	private String filter;
+	private boolean previouslyFiltered = false;
 	public Double maxSize = 5.0;
 
 	public OlympicScatterplot(String csvfile) {
@@ -97,7 +102,12 @@ public class OlympicScatterplot extends Display {
 
 		// ------------------------------------------------------------------
 		// Step 1: setup the visualised data
-
+		
+		/*filter = "Gold";
+		filter = filter + ">1";
+		
+		Predicate filter1 = (Predicate)ExpressionParser.parse(filter);*/
+		
 		VisualTable vt = m_vis.addTable("data", table);
 		
 		// Column that will hold data for tooltip to use
@@ -105,7 +115,7 @@ public class OlympicScatterplot extends Display {
 
 		// ------------------------------------------------------------------
 		// Step 2: setup renderers for visualised data
-
+		
 		m_vis.setRendererFactory(new RendererFactory() {
 			AbstractShapeRenderer sr = new ShapeRenderer();
 			Renderer arY = new AxisRenderer(Constants.FAR_LEFT, Constants.CENTER);
@@ -124,7 +134,6 @@ public class OlympicScatterplot extends Display {
 				VisiblePredicate.TRUE);
 		y_axis = new AxisLayout("data", "Gold", Constants.Y_AXIS,
 				VisiblePredicate.TRUE);
-
 		x_axis.setLayoutBounds(boundsData);
 		y_axis.setLayoutBounds(boundsData);
 
@@ -237,17 +246,12 @@ public class OlympicScatterplot extends Display {
 
 		int left = i.left + paddingLeft;
 		int top = i.top + paddingTop;
-		int innerWidth = getWidth() - i.left - i.right - paddingLeft
-				- paddingRight;
-		int innerHeight = getHeight() - i.top - i.bottom - paddingTop
-				- paddingBottom;
+		int innerWidth = getWidth() - i.left - i.right - paddingLeft - paddingRight;
+		int innerHeight = getHeight() - i.top - i.bottom - paddingTop - paddingBottom;
 
-		boundsData.setRect(left + axisWidth, top, innerWidth - axisWidth,
-				innerHeight - axisHeight);
-		boundsLabelsX.setRect(left + axisWidth, top + innerHeight - axisHeight,
-				innerWidth - axisWidth, axisHeight);
-		boundsLabelsY.setRect(left, top, innerWidth + paddingRight, innerHeight
-				- axisHeight);
+		boundsData.setRect(left + axisWidth, top, innerWidth - axisWidth, innerHeight - axisHeight);
+		boundsLabelsX.setRect(left + axisWidth, top + innerHeight - axisHeight, innerWidth - axisWidth, axisHeight);
+		boundsLabelsY.setRect(left, top, innerWidth + paddingRight, innerHeight - axisHeight);
 	}
 
 	/**
@@ -268,9 +272,21 @@ public class OlympicScatterplot extends Display {
 	public void setYField(String field) {
 		y_axis.setDataField(field);
 		x_axis.setDataField(x_axis.getDataField());
+		y_axis.setScale(Constants.LOG_SCALE);
 	}
 	
 	public void setDataSizeAction(String field){
 		size.setDataField(field);
+	}
+	
+	public void changeFilter(String field) {
+		if(previouslyFiltered) {
+			Predicate prev = (Predicate)ExpressionParser.parse(filter);
+			m_vis.setVisible("data", prev, true);
+		}
+		filter = field + "<1";
+		Predicate filter1 = (Predicate)ExpressionParser.parse(filter);
+		m_vis.setVisible("data", filter1, false);
+		previouslyFiltered = true;
 	}
 }
