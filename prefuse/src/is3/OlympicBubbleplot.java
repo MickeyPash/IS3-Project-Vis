@@ -242,13 +242,11 @@ public class OlympicBubbleplot extends Display {
 		Rectangle2D boundsData = new Rectangle2D.Double();
 		final Rectangle2D boundsLabelsX = new Rectangle2D.Double();
 		final Rectangle2D boundsLabelsY = new Rectangle2D.Double();
+		
 		x_axis = new AxisLayout("data", field, Constants.X_AXIS,
 				VisiblePredicate.TRUE);
-		y_axis = new AxisLayout("data", y_axis.getDataField(),
-				Constants.Y_AXIS, VisiblePredicate.TRUE);
 
 		x_axis.setLayoutBounds(boundsData);
-		y_axis.setLayoutBounds(boundsData);
 
 		AxisLabelLayout x_labels = new AxisLabelLayout("xlab", x_axis,
 				boundsLabelsX);
@@ -276,12 +274,10 @@ public class OlympicBubbleplot extends Display {
 		Rectangle2D boundsData = new Rectangle2D.Double();
 		final Rectangle2D boundsLabelsX = new Rectangle2D.Double();
 		final Rectangle2D boundsLabelsY = new Rectangle2D.Double();
-		x_axis = new AxisLayout("data", y_axis.getDataField(),
-				Constants.X_AXIS, VisiblePredicate.TRUE);
+		
 		y_axis = new AxisLayout("data", field, Constants.Y_AXIS,
 				VisiblePredicate.TRUE);
 
-		x_axis.setLayoutBounds(boundsData);
 		y_axis.setLayoutBounds(boundsData);
 
 		AxisLabelLayout x_labels = new AxisLabelLayout("xlab", x_axis,
