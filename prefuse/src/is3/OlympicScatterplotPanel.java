@@ -14,10 +14,12 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.Shape;
 
+import javax.swing.BorderFactory;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.TitledBorder;
 
 import prefuse.Display;
 import prefuse.util.ColorLib;
@@ -137,6 +139,11 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener, I
 		dropDownMenus.add(sizeControls);
 
 		JPanel colourLegend = new JPanel(new FlowLayout());
+		TitledBorder title;
+		title = BorderFactory.createTitledBorder("Legend");
+		colourLegend.setBorder(title);
+		title = BorderFactory.createTitledBorder("Drop Down Boxes");
+		dropDownMenus.setBorder(title);
 
 		JCheckBox colourBox;
 		JLabel label;

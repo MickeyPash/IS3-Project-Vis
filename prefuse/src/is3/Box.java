@@ -16,6 +16,15 @@ public class Box extends Component{
 	Rectangle s;
 	Color colour;
 	
+	 /**
+     * Create a new Box object.
+     * @param i the width of the box
+     * @param j the height of the box
+     * @param r the red value of the colour of the box
+     * @param g the green value of the colour of the box
+     * @param b the blue value of the colour of the box
+     * @param a the alpha value of the colour of the box
+     */
 	public Box (int i, int j, int r, int g, int b, int a){
 		width = i;
 		height = j;
@@ -23,6 +32,12 @@ public class Box extends Component{
 		colour = new Color(r, g, b, a);
 	}
 	
+	/**
+	 * Create a new Box object. 
+     * @param i the width of the box
+     * @param j the height of the box
+	 * @param c the colour code of the box with alpha
+	 */
 	public Box (int i, int j, int c){
 		width = i;
 		height = j;

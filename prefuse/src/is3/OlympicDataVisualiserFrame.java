@@ -4,15 +4,21 @@
 package is3;
 
 import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
+import javax.swing.BorderFactory;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JList;
 import javax.swing.JPanel;
+import javax.swing.border.TitledBorder;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
 /**
  * @author Michael
@@ -38,7 +44,7 @@ public class OlympicDataVisualiserFrame extends JFrame {
 	 * 
 	 */
 	public OlympicDataVisualiserFrame() {
-
+		TitledBorder title;
 		// TODO Add more views
 		// Map view (copy from demo?)
 
@@ -55,7 +61,11 @@ public class OlympicDataVisualiserFrame extends JFrame {
 				clazz = Class.forName("is3."
 						+ visualisation.replaceAll("\\s+", "") + "Panel");
 				constructor = clazz.getConstructor(String.class);
-				visualisations.add((JPanel) constructor.newInstance(data));
+				JPanel temp = (JPanel) constructor.newInstance(data);
+				title = BorderFactory.createTitledBorder("Visualisation");
+				title.setTitleJustification(TitledBorder.CENTER);
+				temp.setBorder(title);
+				visualisations.add(temp);
 			} catch (ClassNotFoundException | NoSuchMethodException
 					| SecurityException | InstantiationException
 					| IllegalAccessException | IllegalArgumentException
@@ -69,18 +79,24 @@ public class OlympicDataVisualiserFrame extends JFrame {
 		setTitle("Olympic Data Visualiser");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		JComboBox<String> visualisationSelector = new JComboBox<String>(
+		JList<String> visualisationSelector = new JList<String>(
 				visualisationOptions);
-		visualisationSelector.addActionListener(new ComboBoxListener());
+		
+		visualisationSelector.addListSelectionListener(new ComboBoxListener());
+		
+		JPanel visualisationSelectorPanel = new JPanel(new BorderLayout());
+		visualisationSelectorPanel.add(visualisationSelector, BorderLayout.LINE_START);
+		title = BorderFactory.createTitledBorder("Choose");
+		visualisationSelectorPanel.setBorder(title);
 
-		getContentPane().add(visualisationSelector, BorderLayout.PAGE_START);
+		getContentPane().add(visualisationSelectorPanel, BorderLayout.LINE_START);
 		getContentPane().add(visualisations.get(0));
 
 		pack();
 		setVisible(true);
 	}
 
-	private class ComboBoxListener implements ActionListener {
+	private class ComboBoxListener implements ActionListener, ListSelectionListener {
 
 		// This inner class will receive events triggered by the combo box
 		// changing and will hide/show the visualisations appropriately
@@ -97,6 +113,20 @@ public class OlympicDataVisualiserFrame extends JFrame {
 				}
 			}
 		}
+
+		@Override
+		public void valueChanged(ListSelectionEvent e) {
+			String value = ((JList<String>) e.getSource()).getSelectedValue();
+//			System.out.println(value);
+			for (int i = 0; i < visualisationOptions.length; i++) {
+				if (value.equalsIgnoreCase(visualisationOptions[i])) {
+					getContentPane().remove(1);
+					getContentPane().add(visualisations.get(i));
+					pack();
+				}
+			}
+		}
+		
 
 	}
 
