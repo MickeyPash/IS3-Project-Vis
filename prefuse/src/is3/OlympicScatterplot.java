@@ -19,7 +19,6 @@ import prefuse.activity.Activity;
 import prefuse.controls.PanControl;
 import prefuse.controls.ToolTipControl;
 import prefuse.controls.ZoomControl;
-import prefuse.data.Schema;
 import prefuse.data.Table;
 import prefuse.data.expression.Predicate;
 import prefuse.data.expression.parser.ExpressionParser;
@@ -53,38 +52,6 @@ public class OlympicScatterplot extends Display {
 		super(new Visualization());
 
 		table = new Table();
-		Schema schema = new Schema();
-
-		// Schema allows specifying type of data being stored
-
-		schema.addColumn("Country", String.class);
-		schema.addColumn("Continent", int.class);
-		schema.addColumn("Adult literacy rate (%)", Double.class);
-		schema.addColumn("Population (in thousands) total", int.class);
-		schema.addColumn("Population median age (years)", int.class);
-		schema.addColumn(
-				"Community and traditional health workers density (per 10 000 population)",
-				Double.class);
-		schema.addColumn(
-				"General government expenditure on health as percentage of total expenditure on health",
-				int.class);
-		schema.addColumn(
-				"General government expenditure on health as percentage of total government expenditure",
-				int.class);
-		schema.addColumn("F2012", int.class);
-		schema.addColumn("M2012", int.class);
-		schema.addColumn("TeamSize", int.class);
-		schema.addColumn("Gold", int.class);
-		schema.addColumn("Silver", int.class);
-		schema.addColumn("Bronze", int.class);
-
-		table.addColumns(schema);
-
-		/*
-		 * this is me just randomly putting 200 since I know there isn't more
-		 * than 200 countries, need to change this
-		 */
-		table.addRows(200);
 
 		// Read table from csv file
 		try {
@@ -99,8 +66,6 @@ public class OlympicScatterplot extends Display {
 		final Rectangle2D boundsLabelsX = new Rectangle2D.Double();
 		final Rectangle2D boundsLabelsY = new Rectangle2D.Double();
 
-		// TODO Consider logarithmic scale for graph
-		// This would be a user option
 		// Look at this for possible implementation
 		// https://github.com/prefuse/Flare/blob/master/flare/src/flare/scale/LogScale.as
 
@@ -279,8 +244,8 @@ public class OlympicScatterplot extends Display {
 		final Rectangle2D boundsLabelsY = new Rectangle2D.Double();
 		x_axis = new AxisLayout("data", field, Constants.X_AXIS,
 				VisiblePredicate.TRUE);
-		y_axis = new AxisLayout("data", y_axis.getDataField(), Constants.Y_AXIS,
-				VisiblePredicate.TRUE);
+		y_axis = new AxisLayout("data", y_axis.getDataField(),
+				Constants.Y_AXIS, VisiblePredicate.TRUE);
 
 		x_axis.setLayoutBounds(boundsData);
 		y_axis.setLayoutBounds(boundsData);
@@ -311,8 +276,8 @@ public class OlympicScatterplot extends Display {
 		Rectangle2D boundsData = new Rectangle2D.Double();
 		final Rectangle2D boundsLabelsX = new Rectangle2D.Double();
 		final Rectangle2D boundsLabelsY = new Rectangle2D.Double();
-		x_axis = new AxisLayout("data", y_axis.getDataField(), Constants.X_AXIS,
-				VisiblePredicate.TRUE);
+		x_axis = new AxisLayout("data", y_axis.getDataField(),
+				Constants.X_AXIS, VisiblePredicate.TRUE);
 		y_axis = new AxisLayout("data", field, Constants.Y_AXIS,
 				VisiblePredicate.TRUE);
 
@@ -335,28 +300,26 @@ public class OlympicScatterplot extends Display {
 		m_vis.run("draw");
 	}
 
-	
-	public void setDataSizeAction(String field){
-		if (field.equals("None")){
+	public void setDataSizeAction(String field) {
+		if (field.equals("None")) {
 			size.setMinimumSize(1.0);
 			size.setMaximumSize(1.0);
-		}
-		else{
+		} else {
 			size.setMinimumSize(0.2);
 			size.setMaximumSize(5.0);
 			size.setDataField(field);
 		}
 	}
-	
+
 	public void Filter(String field) {
-		filter = "Continent="+field;
-		Predicate filter1 = (Predicate)ExpressionParser.parse(filter);
+		filter = "Continent=" + field;
+		Predicate filter1 = (Predicate) ExpressionParser.parse(filter);
 		m_vis.setVisible("data", filter1, false);
 	}
-	
+
 	public void deFilter(String field) {
-		filter = "Continent="+field;
-		Predicate filter1 = (Predicate)ExpressionParser.parse(filter);
+		filter = "Continent=" + field;
+		Predicate filter1 = (Predicate) ExpressionParser.parse(filter);
 		m_vis.setVisible("data", filter1, true);
 	}
 }

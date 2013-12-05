@@ -8,10 +8,10 @@ import javax.swing.Icon;
 import javax.swing.UIManager;
 
 public class ColouredCheckBoxIcon implements Icon {
-	
+
 	private Color colour;
 	private int width, height;
-	
+
 	ColouredCheckBoxIcon(Color iconColour) {
 
 		colour = iconColour;
@@ -22,14 +22,14 @@ public class ColouredCheckBoxIcon implements Icon {
 
 		height = icon.getIconHeight();
 
-		}
+	}
 
 	@Override
 	public void paintIcon(Component c, Graphics g, int x, int y) {
-		
+
 		g.setColor(colour);
 		g.fillRect(x, y, width, height);
-		
+
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class ColouredCheckBoxIcon implements Icon {
 	public int getIconHeight() {
 		return height;
 	}
-	
+
 	public void setColour(Color c) {
 		colour = c;
 	}

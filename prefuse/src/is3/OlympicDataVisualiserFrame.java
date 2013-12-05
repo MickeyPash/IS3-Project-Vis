@@ -4,7 +4,6 @@
 package is3;
 
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.reflect.Constructor;
@@ -20,10 +19,6 @@ import javax.swing.border.TitledBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-/**
- * @author Michael
- * 
- */
 @SuppressWarnings("serial")
 public class OlympicDataVisualiserFrame extends JFrame {
 
@@ -46,7 +41,6 @@ public class OlympicDataVisualiserFrame extends JFrame {
 	public OlympicDataVisualiserFrame() {
 		TitledBorder title;
 		// TODO Add more views
-		// Map view (copy from demo?)
 
 		// TODO filter data (sliders, checkboxes)
 
@@ -81,22 +75,25 @@ public class OlympicDataVisualiserFrame extends JFrame {
 
 		JList<String> visualisationSelector = new JList<String>(
 				visualisationOptions);
-		
+
 		visualisationSelector.addListSelectionListener(new ComboBoxListener());
-		
+
 		JPanel visualisationSelectorPanel = new JPanel(new BorderLayout());
-		visualisationSelectorPanel.add(visualisationSelector, BorderLayout.LINE_START);
+		visualisationSelectorPanel.add(visualisationSelector,
+				BorderLayout.LINE_START);
 		title = BorderFactory.createTitledBorder("Choose");
 		visualisationSelectorPanel.setBorder(title);
 
-		getContentPane().add(visualisationSelectorPanel, BorderLayout.LINE_START);
+		getContentPane().add(visualisationSelectorPanel,
+				BorderLayout.LINE_START);
 		getContentPane().add(visualisations.get(0));
 
 		pack();
 		setVisible(true);
 	}
 
-	private class ComboBoxListener implements ActionListener, ListSelectionListener {
+	private class ComboBoxListener implements ActionListener,
+			ListSelectionListener {
 
 		// This inner class will receive events triggered by the combo box
 		// changing and will hide/show the visualisations appropriately
@@ -117,7 +114,6 @@ public class OlympicDataVisualiserFrame extends JFrame {
 		@Override
 		public void valueChanged(ListSelectionEvent e) {
 			String value = ((JList<String>) e.getSource()).getSelectedValue();
-//			System.out.println(value);
 			for (int i = 0; i < visualisationOptions.length; i++) {
 				if (value.equalsIgnoreCase(visualisationOptions[i])) {
 					getContentPane().remove(1);
@@ -126,7 +122,6 @@ public class OlympicDataVisualiserFrame extends JFrame {
 				}
 			}
 		}
-		
 
 	}
 

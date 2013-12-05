@@ -37,6 +37,8 @@ public class OlympicTreeViewPanel extends JPanel {
 
 		final String treeNodes = "tree.nodes";
 
+		setLayout(new BorderLayout());
+
 		Color BACKGROUND = Color.WHITE;
 		Color FOREGROUND = Color.BLACK;
 		final String label = "name";
@@ -79,16 +81,11 @@ public class OlympicTreeViewPanel extends JPanel {
 		box.add(search);
 		box.add(Box.createHorizontalStrut(3));
 		box.setBackground(BACKGROUND);
-	
-		JPanel panel = new JPanel(new BorderLayout());
-		panel.setPreferredSize(new Dimension(1280, 720));
-		panel.setBackground(BACKGROUND);
-		panel.setForeground(FOREGROUND);
 
-		panel.add(visualisation, BorderLayout.CENTER);
-		panel.add(box, BorderLayout.SOUTH);
+		setBackground(BACKGROUND);
+		setForeground(FOREGROUND);
 
-		add(panel);
-
+		add(visualisation, BorderLayout.CENTER);
+		add(box, BorderLayout.SOUTH);
 	}
 }

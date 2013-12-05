@@ -1,22 +1,12 @@
 package is3;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
-import java.awt.event.MouseEvent;
 import java.awt.geom.Point2D;
 
 import javax.swing.AbstractAction;
-import javax.swing.BorderFactory;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.JComponent;
-import javax.swing.JPanel;
 import javax.swing.KeyStroke;
-import javax.swing.SwingConstants;
-
 import prefuse.Constants;
 import prefuse.Display;
 import prefuse.Visualization;
@@ -34,7 +24,6 @@ import prefuse.action.filter.FisheyeTreeFilter;
 import prefuse.action.layout.CollapsedSubtreeLayout;
 import prefuse.action.layout.graph.NodeLinkTreeLayout;
 import prefuse.activity.SlowInSlowOutPacer;
-import prefuse.controls.ControlAdapter;
 import prefuse.controls.FocusControl;
 import prefuse.controls.PanControl;
 import prefuse.controls.WheelZoomControl;
@@ -52,18 +41,11 @@ import prefuse.render.AbstractShapeRenderer;
 import prefuse.render.LabelRenderer;
 import prefuse.util.ColorLib;
 import prefuse.util.FontLib;
-import prefuse.util.ui.JFastLabel;
-import prefuse.util.ui.JSearchPanel;
 import prefuse.visual.VisualItem;
 import prefuse.visual.expression.InGroupPredicate;
 import prefuse.visual.sort.TreeDepthItemSorter;
 
-/**
- * Demonstration of a node-link tree viewer
- * 
- * @version 2.0
- * @author <a href="http://jheer.org">jeffrey heer</a>
- */
+
 @SuppressWarnings("serial")
 public class OlympicTreeView extends Display {
 
@@ -187,8 +169,7 @@ public class OlympicTreeView extends Display {
 		// ------------------------------------------------
 
 		// initialise the display
-		//setSize(this.size());
-		setSize(2560, 1440);
+		setSize(this.getPreferredSize());
 		setItemSorter(new TreeDepthItemSorter());
 		addControlListener(new ZoomToFitControl());
 		addControlListener(new ZoomControl());
