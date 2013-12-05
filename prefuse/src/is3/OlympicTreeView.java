@@ -171,7 +171,7 @@ public class OlympicTreeView extends Display {
 		// ------------------------------------------------
 
 		// initialise the display
-		setSize(new Dimension(1200,800));
+		setSize(new Dimension(1200,750));
 		setItemSorter(new TreeDepthItemSorter());
 		addControlListener(new ZoomToFitControl());
 		addControlListener(new ZoomControl());
