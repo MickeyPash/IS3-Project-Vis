@@ -21,6 +21,8 @@ import prefuse.controls.ToolTipControl;
 import prefuse.controls.ZoomControl;
 import prefuse.data.Schema;
 import prefuse.data.Table;
+import prefuse.data.expression.Predicate;
+import prefuse.data.expression.parser.ExpressionParser;
 import prefuse.data.io.CSVTableReader;
 import prefuse.data.io.DataIOException;
 import prefuse.render.AbstractShapeRenderer;
@@ -41,6 +43,7 @@ public class OlympicScatterplot extends Display {
 	private AxisLayout x_axis;
 	private AxisLayout y_axis;
 	private DataSizeAction size;
+	private String filter;
 
 	public OlympicScatterplot(String csvfile) {
 
@@ -295,5 +298,17 @@ public class OlympicScatterplot extends Display {
 			size.setMaximumSize(5.0);
 			size.setDataField(field);
 		}
+	}
+	
+	public void Filter(String field) {
+		filter = "Continent="+field;
+		Predicate filter1 = (Predicate)ExpressionParser.parse(filter);
+		m_vis.setVisible("data", filter1, false);
+	}
+	
+	public void deFilter(String field) {
+		filter = "Continent="+field;
+		Predicate filter1 = (Predicate)ExpressionParser.parse(filter);
+		m_vis.setVisible("data", filter1, true);
 	}
 }

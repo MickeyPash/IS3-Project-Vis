@@ -33,6 +33,13 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener, I
 
 	private JComboBox<String> xSelect, ySelect, sizeSelect;
 	private JCheckBox middleEast, europe, africa, northAmerica, southAmerica, oceania, asia;
+	private boolean middleEastFiltered = false;
+	private boolean europeFiltered = false;
+	private boolean africaFiltered = false;
+	private boolean northAmericaFiltered = false;
+	private boolean southAmericaFiltered = false;
+	private boolean oceaniaFiltered = false;
+	private boolean asiaFiltered = false;
 	
 	private Color[] colours = {
 			// Middle East
@@ -169,30 +176,67 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener, I
 	}
 	
 	private void changeColour(JCheckBox box, int colourPos) {
-		if ( box.isSelected() ) ((ColouredCheckBoxIcon) box.getIcon()).setColour(colours[colourPos]);
+		if ( box.isSelected() ) 
+			((ColouredCheckBoxIcon) box.getIcon()).setColour(colours[colourPos]);
     	else ((ColouredCheckBoxIcon) box.getIcon()).setColour(colours[7]);
-    	box.getIcon().paintIcon(box, box.getGraphics(), box.getX(), box.getY());
+    	
+		box.getIcon().paintIcon(box, box.getGraphics(), box.getX(), box.getY());
 	}
 	
 	/** Listens to the check boxes. */
     public void itemStateChanged(ItemEvent e) {
     	
         Object source = e.getItemSelectable();
- 
+  
         if (source == middleEast) {
         	changeColour(middleEast, 0);
+        	if(visualisation instanceof OlympicScatterplot) {
+        		OlympicScatterplot s = (OlympicScatterplot) visualisation;
+        		if(!middleEastFiltered){ s.Filter("1"); middleEastFiltered = true;}
+        		else{ s.deFilter("1"); middleEastFiltered = false;}
+        	}
         } else if (source == europe) {
         	changeColour(europe, 1);
+        	if(visualisation instanceof OlympicScatterplot) {
+        		OlympicScatterplot s = (OlympicScatterplot) visualisation;
+        		if(!europeFiltered){ s.Filter("2"); europeFiltered = true;}
+        		else {s.deFilter("2"); europeFiltered = false; }
+        	}
         } else if (source == africa) {
         	changeColour(africa, 2);
+        	if(visualisation instanceof OlympicScatterplot) {
+        		OlympicScatterplot s = (OlympicScatterplot) visualisation;
+        		if(!africaFiltered){ s.Filter("3"); africaFiltered = true;}
+        		else{ s.deFilter("3"); africaFiltered = false;}
+        	}
         } else if (source == northAmerica) {
         	changeColour(northAmerica, 3);
+        	if(visualisation instanceof OlympicScatterplot) {
+        		OlympicScatterplot s = (OlympicScatterplot) visualisation;
+        		if(!northAmericaFiltered){ s.Filter("4"); northAmericaFiltered = true;}
+        		else{ s.deFilter("4"); northAmericaFiltered = false;}
+        	}
         } else if (source == southAmerica) {
         	changeColour(southAmerica, 4);
+        	if(visualisation instanceof OlympicScatterplot) {
+        		OlympicScatterplot s = (OlympicScatterplot) visualisation;
+        		if(!southAmericaFiltered){ s.Filter("5"); southAmericaFiltered = true;}
+        		else{ s.deFilter("5"); southAmericaFiltered = false;}
+        	}
         } else if (source == oceania) {
         	changeColour(oceania, 5);
+        	if(visualisation instanceof OlympicScatterplot) {
+        		OlympicScatterplot s = (OlympicScatterplot) visualisation;
+        		if(!oceaniaFiltered){ s.Filter("6"); oceaniaFiltered = true;}
+        		else{ s.deFilter("6"); oceaniaFiltered = false;}
+        	}
         } else if (source == asia) {
         	changeColour(asia, 6);
+        	if(visualisation instanceof OlympicScatterplot) {
+        		OlympicScatterplot s = (OlympicScatterplot) visualisation;
+        		if(!asiaFiltered){ s.Filter("7"); asiaFiltered = true;}
+        		else{ s.deFilter("7"); asiaFiltered = false;}
+        	}
         }
     }
 	
