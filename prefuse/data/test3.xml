@@ -1,0 +1,4001 @@
+<tree>
+ <declarations>
+   <attributeDecl name="name" type="String"/>
+ </declarations>
+ <branch>
+  <attribute name="name" value="World"/>
+ <branch>
+  <attribute name="name" value="Continents"/>
+  <branch>
+   <attribute name="name" value="Asia"/>
+   <branch>
+    <attribute name="name" value="Afghanistan"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Bahrain"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Cape Verde"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Djibouti"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Egypt"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Iran (Islamic Republic of)"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="4"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="5"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Iraq"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="8"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Israel"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Jordan"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Kuwait"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Libyan Arab Jamahiriya"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Malta"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Morocco"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Oman"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Qatar"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Saudi Arabia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Syria"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Tunisia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="United Arab Emirates"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Yemen"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+  </branch>
+  <branch>
+   <attribute name="name" value="Europe"/>
+   <branch>
+    <attribute name="name" value="Albania"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Andorra"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Armenia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Austria"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Azerbaijan"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="6"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Belarus"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="5"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="5"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Belgium"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Bosnia and Herzegovina"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Bulgaria"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Croatia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Cyprus"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Czech Republic"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="4"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Denmark"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="4"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Estonia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Finland"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="France"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="11"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="11"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="12"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Georgia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Germany"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="11"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="19"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="14"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Greece"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Hungary"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="8"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="4"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="5"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Iceland"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Ireland"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Italy"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="8"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="9"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="11"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Kazakhstan"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="7"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="5"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Kyrgyzstan"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Latvia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Lithuania"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Luxembourg"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Macedonia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Moldova"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Monaco"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Montenegro"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Netherlands"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="6"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="6"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="8"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Norway"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Poland"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="6"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Portugal"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Romania"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="5"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Russia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="24"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="26"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="32"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="San Marino"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Serbia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Slovakia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Slovenia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Spain"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="10"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="4"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Sweden"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="4"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Switzerland"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Tajikistan"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Turkey"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Turkmenistan"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Ukraine"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="6"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="5"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="9"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="United Kingdom"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="29"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="17"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="19"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Uzbekistan"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+   </branch>
+  </branch>
+  <branch>
+   <attribute name="name" value="Africa"/>
+   <branch>
+    <attribute name="name" value="Algeria"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Angola"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Benin"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Botswana"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Burkina Faso"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Burundi"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Cameroon"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Central African Republic"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Chad"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Comoros"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Cote d'Ivoire"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Equatorial Guinea"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Eritrea"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Ethiopia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Gabon"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Gambia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Ghana"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Guinea"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Guinea-Bissau"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Kenya"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="4"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="5"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Lebanon"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Lesotho"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Liberia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Madagascar"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Malawi"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Mali"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Mauritania"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Mauritius"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Mozambique"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Namibia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Niger"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Nigeria"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Rwanda"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Sao Tome and Principe"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Senegal"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Seychelles"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Sierra Leone"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Somalia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="South Africa"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Sudan"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Swaziland"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Tanzania"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Togo"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Uganda"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Zambia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Zimbabwe"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+  </branch>
+  <branch>
+   <attribute name="name" value="North America"/>
+   <branch>
+    <attribute name="name" value="Antigua and Barbuda"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Bahamas"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Barbados"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Bermuda"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Canada"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="5"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="12"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Mexico"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="United States of America"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="46"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="29"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="29"/>
+       </leaf>
+     </branch> 
+   </branch>
+  </branch>
+  <branch>
+   <attribute name="name" value="South America"/>
+   <branch>
+    <attribute name="name" value="Argentina"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Belize"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Bolivia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Brazil"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="5"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="9"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Chile"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Colombia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="4"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Costa Rica"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Cuba"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="5"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="6"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Dominica"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Dominican Republic"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Ecuador"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="El Salvador"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Grenada"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Guatemala"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Guyana"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Haiti"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Honduras"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Jamaica"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="4"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="4"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="4"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Nicaragua"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Panama"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Paraguay"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Peru"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Puerto Rico"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Saint Kitts and Nevis"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Saint Lucia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Saint Vincent and the Grenadines"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Suriname"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Trinidad and Tobago"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Uruguay"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Venezuela"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+  </branch>
+  <branch>
+   <attribute name="name" value="Australia"/>
+   <branch>
+    <attribute name="name" value="Australia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="7"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="16"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="12"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Brunei Darussalam"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Cook Islands"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Fiji"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Indonesia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Japan"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="7"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="14"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="17"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Kiribati"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Lao People's Democratic Republic"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Malaysia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Marshall Islands"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Micronesia (Federated States of)"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Mongolia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="3"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Nauru"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="New Zealand"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="6"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="5"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Niue"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Papua New Guinea"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Philippines"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Samoa"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Singapore"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Solomon Islands"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Taiwan"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Thailand"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="1"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Tonga"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Tuvalu"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Vanuatu"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Vietnam"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+  </branch>
+  <branch>
+   <attribute name="name" value="Other Asia"/>
+   <branch>
+    <attribute name="name" value="Bangladesh"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Bhutan"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Cambodia"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="China"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="38"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="27"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="23"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="India"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="2"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="4"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Maldives"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Nepal"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Pakistan"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+   <branch>
+    <attribute name="name" value="Sri Lanka"/>
+     <branch>
+      <attribute name="name" value="Gold"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Silver"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+     <branch>
+      <attribute name="name" value="Bronze"/>
+       <leaf>
+        <attribute name="name" value="0"/>
+       </leaf>
+     </branch> 
+   </branch>
+  </branch>
+ </branch>
+ </branch>
+ </tree>
