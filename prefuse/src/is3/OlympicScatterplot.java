@@ -273,8 +273,32 @@ public class OlympicScatterplot extends Display {
 	 * @param field
 	 */
 	public void setXField(String field) {
-		x_axis.setDataField(field);
-		y_axis.setDataField(y_axis.getDataField());
+		m_vis.cancel("draw");
+		Rectangle2D boundsData = new Rectangle2D.Double();
+		final Rectangle2D boundsLabelsX = new Rectangle2D.Double();
+		final Rectangle2D boundsLabelsY = new Rectangle2D.Double();
+		x_axis = new AxisLayout("data", field, Constants.X_AXIS,
+				VisiblePredicate.TRUE);
+		y_axis = new AxisLayout("data", y_axis.getDataField(), Constants.Y_AXIS,
+				VisiblePredicate.TRUE);
+
+		x_axis.setLayoutBounds(boundsData);
+		y_axis.setLayoutBounds(boundsData);
+
+		AxisLabelLayout x_labels = new AxisLabelLayout("xlab", x_axis,
+				boundsLabelsX);
+		AxisLabelLayout y_labels = new AxisLabelLayout("ylab", y_axis,
+				boundsLabelsY);
+		ActionList draw = new ActionList(Activity.INFINITY);
+		draw.add(x_axis);
+		draw.add(y_axis);
+		draw.add(x_labels);
+		draw.add(y_labels);
+		draw.add(size);
+		draw.add(new RepaintAction());
+		m_vis.putAction("draw", draw);
+		updateBounds(boundsData, boundsLabelsX, boundsLabelsY);
+		m_vis.run("draw");
 	}
 
 	/**
@@ -283,8 +307,32 @@ public class OlympicScatterplot extends Display {
 	 * @param field
 	 */
 	public void setYField(String field) {
-		y_axis.setDataField(field);
-		x_axis.setDataField(x_axis.getDataField());
+		m_vis.cancel("draw");
+		Rectangle2D boundsData = new Rectangle2D.Double();
+		final Rectangle2D boundsLabelsX = new Rectangle2D.Double();
+		final Rectangle2D boundsLabelsY = new Rectangle2D.Double();
+		x_axis = new AxisLayout("data", y_axis.getDataField(), Constants.X_AXIS,
+				VisiblePredicate.TRUE);
+		y_axis = new AxisLayout("data", field, Constants.Y_AXIS,
+				VisiblePredicate.TRUE);
+
+		x_axis.setLayoutBounds(boundsData);
+		y_axis.setLayoutBounds(boundsData);
+
+		AxisLabelLayout x_labels = new AxisLabelLayout("xlab", x_axis,
+				boundsLabelsX);
+		AxisLabelLayout y_labels = new AxisLabelLayout("ylab", y_axis,
+				boundsLabelsY);
+		ActionList draw = new ActionList(Activity.INFINITY);
+		draw.add(x_axis);
+		draw.add(y_axis);
+		draw.add(x_labels);
+		draw.add(y_labels);
+		draw.add(size);
+		draw.add(new RepaintAction());
+		m_vis.putAction("draw", draw);
+		updateBounds(boundsData, boundsLabelsX, boundsLabelsY);
+		m_vis.run("draw");
 	}
 
 	
