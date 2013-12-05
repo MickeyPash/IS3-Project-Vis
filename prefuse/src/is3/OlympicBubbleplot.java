@@ -36,7 +36,7 @@ import prefuse.visual.expression.VisiblePredicate;
 import prefuse.visual.sort.ItemSorter;
 
 @SuppressWarnings("serial")
-public class OlympicScatterplot extends Display {
+public class OlympicBubbleplot extends Display {
 
 	private Table table;
 	private AxisLayout x_axis;
@@ -44,7 +44,7 @@ public class OlympicScatterplot extends Display {
 	private DataSizeAction size;
 	private String filter;
 
-	public OlympicScatterplot(String csvfile) {
+	public OlympicBubbleplot(String csvfile) {
 
 		// Help mainly found at:
 		// http://www.ifs.tuwien.ac.at/~rind/w/doku.php/java/prefuse-scatterplot

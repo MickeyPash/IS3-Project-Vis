@@ -3,6 +3,8 @@
  */
 package is3;
 
+import java.awt.Dimension;
+
 public class OlympicDataVisualiser {
 
 	/**
@@ -10,6 +12,7 @@ public class OlympicDataVisualiser {
 	 */
 	public static void main(String[] args) {
 		OlympicDataVisualiserFrame frame = new OlympicDataVisualiserFrame();
+		//frame.setPreferredSize(new Dimension(1280, 720));
 	}
 
 }

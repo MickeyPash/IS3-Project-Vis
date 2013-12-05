@@ -5,12 +5,14 @@ package is3;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+
 import javax.swing.BorderFactory;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
@@ -21,7 +23,7 @@ import javax.swing.border.TitledBorder;
 import prefuse.Display;
 
 @SuppressWarnings("serial")
-public class OlympicScatterplotPanel extends JPanel implements ActionListener,
+public class OlympicBubbleplotPanel extends JPanel implements ActionListener,
 		ItemListener {
 	public Display visualisation;
 
@@ -57,10 +59,10 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener,
 			"Africa", "North America", "South America", "Oceania & some Asia",
 			"Asia" };
 
-	public OlympicScatterplotPanel(String data) {
+	public OlympicBubbleplotPanel(String data) {
 		setLayout(new BorderLayout());
 
-		visualisation = new OlympicScatterplot(data);
+		visualisation = new OlympicBubbleplot(data);
 
 		JCheckBox[] colourBoxes = {
 				middleEast = new JCheckBox(
@@ -159,7 +161,7 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener,
 		axisPanel.add(colourLegend, BorderLayout.PAGE_START);
 
 		add(axisPanel, BorderLayout.PAGE_END);
-
+		setPreferredSize(new Dimension(1200,800));
 		add(visualisation, BorderLayout.CENTER);
 
 	}
@@ -168,8 +170,8 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener,
 	public void actionPerformed(ActionEvent e) {
 		JComboBox<String> cb = (JComboBox<String>) e.getSource();
 		String field = (String) cb.getSelectedItem();
-		if (visualisation instanceof OlympicScatterplot) {
-			OlympicScatterplot s = (OlympicScatterplot) visualisation;
+		if (visualisation instanceof OlympicBubbleplot) {
+			OlympicBubbleplot s = (OlympicBubbleplot) visualisation;
 			// s.setYField(field);
 			if (cb == ySelect)
 				s.setYField(field);
@@ -197,8 +199,8 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener,
 
 		if (source == middleEast) {
 			changeColour(middleEast, 0);
-			if (visualisation instanceof OlympicScatterplot) {
-				OlympicScatterplot s = (OlympicScatterplot) visualisation;
+			if (visualisation instanceof OlympicBubbleplot) {
+				OlympicBubbleplot s = (OlympicBubbleplot) visualisation;
 				if (!middleEastFiltered) {
 					s.Filter("1");
 					middleEastFiltered = true;
@@ -209,8 +211,8 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener,
 			}
 		} else if (source == europe) {
 			changeColour(europe, 1);
-			if (visualisation instanceof OlympicScatterplot) {
-				OlympicScatterplot s = (OlympicScatterplot) visualisation;
+			if (visualisation instanceof OlympicBubbleplot) {
+				OlympicBubbleplot s = (OlympicBubbleplot) visualisation;
 				if (!europeFiltered) {
 					s.Filter("2");
 					europeFiltered = true;
@@ -221,8 +223,8 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener,
 			}
 		} else if (source == africa) {
 			changeColour(africa, 2);
-			if (visualisation instanceof OlympicScatterplot) {
-				OlympicScatterplot s = (OlympicScatterplot) visualisation;
+			if (visualisation instanceof OlympicBubbleplot) {
+				OlympicBubbleplot s = (OlympicBubbleplot) visualisation;
 				if (!africaFiltered) {
 					s.Filter("3");
 					africaFiltered = true;
@@ -233,8 +235,8 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener,
 			}
 		} else if (source == northAmerica) {
 			changeColour(northAmerica, 3);
-			if (visualisation instanceof OlympicScatterplot) {
-				OlympicScatterplot s = (OlympicScatterplot) visualisation;
+			if (visualisation instanceof OlympicBubbleplot) {
+				OlympicBubbleplot s = (OlympicBubbleplot) visualisation;
 				if (!northAmericaFiltered) {
 					s.Filter("4");
 					northAmericaFiltered = true;
@@ -245,8 +247,8 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener,
 			}
 		} else if (source == southAmerica) {
 			changeColour(southAmerica, 4);
-			if (visualisation instanceof OlympicScatterplot) {
-				OlympicScatterplot s = (OlympicScatterplot) visualisation;
+			if (visualisation instanceof OlympicBubbleplot) {
+				OlympicBubbleplot s = (OlympicBubbleplot) visualisation;
 				if (!southAmericaFiltered) {
 					s.Filter("5");
 					southAmericaFiltered = true;
@@ -257,8 +259,8 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener,
 			}
 		} else if (source == oceania) {
 			changeColour(oceania, 5);
-			if (visualisation instanceof OlympicScatterplot) {
-				OlympicScatterplot s = (OlympicScatterplot) visualisation;
+			if (visualisation instanceof OlympicBubbleplot) {
+				OlympicBubbleplot s = (OlympicBubbleplot) visualisation;
 				if (!oceaniaFiltered) {
 					s.Filter("6");
 					oceaniaFiltered = true;
@@ -269,8 +271,8 @@ public class OlympicScatterplotPanel extends JPanel implements ActionListener,
 			}
 		} else if (source == asia) {
 			changeColour(asia, 6);
-			if (visualisation instanceof OlympicScatterplot) {
-				OlympicScatterplot s = (OlympicScatterplot) visualisation;
+			if (visualisation instanceof OlympicBubbleplot) {
+				OlympicBubbleplot s = (OlympicBubbleplot) visualisation;
 				if (!asiaFiltered) {
 					s.Filter("7");
 					asiaFiltered = true;

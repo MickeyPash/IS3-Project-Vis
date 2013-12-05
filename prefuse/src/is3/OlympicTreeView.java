@@ -1,12 +1,14 @@
 package is3;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.geom.Point2D;
 
 import javax.swing.AbstractAction;
 import javax.swing.KeyStroke;
+
 import prefuse.Constants;
 import prefuse.Display;
 import prefuse.Visualization;
@@ -169,7 +171,7 @@ public class OlympicTreeView extends Display {
 		// ------------------------------------------------
 
 		// initialise the display
-		setSize(this.getPreferredSize());
+		setSize(new Dimension(1200,800));
 		setItemSorter(new TreeDepthItemSorter());
 		addControlListener(new ZoomToFitControl());
 		addControlListener(new ZoomControl());
