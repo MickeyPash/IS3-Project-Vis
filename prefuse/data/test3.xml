@@ -7,7 +7,7 @@
  <branch>
   <attribute name="name" value="Continents"/>
   <branch>
-   <attribute name="name" value="Asia"/>
+   <attribute name="name" value="Middle East"/>
    <branch>
     <attribute name="name" value="Afghanistan"/>
      <branch>
@@ -3256,7 +3256,7 @@
    </branch>
   </branch>
   <branch>
-   <attribute name="name" value="Australia"/>
+   <attribute name="name" value="Oceania"/>
    <branch>
     <attribute name="name" value="Australia"/>
      <branch>
@@ -3805,7 +3805,7 @@
    </branch>
   </branch>
   <branch>
-   <attribute name="name" value="Other Asia"/>
+   <attribute name="name" value="Asia"/>
    <branch>
     <attribute name="name" value="Bangladesh"/>
      <branch>
